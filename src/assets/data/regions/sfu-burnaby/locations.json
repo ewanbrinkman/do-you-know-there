@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "filename": "intersection-foggy.jpg",
+        "name": "Foggy Intersection ",
+        "difficulty": 4,
+        "hint": "Somewhere with water.",
+        "coordinates": {
+            "lat": 49.277692226882145,
+            "lng": -122.90898263454439
+        },
+        "keywords": ["fog", "intersection"]
+    },
+    {
+        "id": 2,
+        "filename": "fish-pond-foggy.jpg",
+        "name": "Foggy Fish Pond",
+        "difficulty": 2,
+        "hint": "Not near any classes.",
+        "coordinates": {
+            "lat": 49.278791124086126,
+            "lng": -122.91716873645784
+        },
+        "keywords": ["fog", "fish-pond"]
+    }
+]
