@@ -1,4 +1,4 @@
-import GameContainer from '@components/Features/GameContainer';
+import GameContainer from '@components/Features/Game/GameContainer';
 
 function Game() {
     return (
