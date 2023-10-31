@@ -35,7 +35,7 @@ const LocationImage: React.FC<LocationImageProps> = (
         //     height: '100vw',
         // }}>
         // <div className='relative' style={{width: `${props.size}px`, height: `${props.size}px`}}>
-        <div className={props.className}>
+        <div className={props.className} style={props.style}>
             <Image fill
             src={`/regions/${props.region}/locations/${locationData.filename}`}
             alt="A location."

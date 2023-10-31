@@ -1,18 +1,18 @@
 .game-location-image {
-    transition: transform 0.3s ease-in-out, bottom 0.3s ease-in-out,
-        right 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, bottom 0.3s ease-in-out,
+    right 0.3s ease-in-out;
 }
 
 .game-location-image--minimized {
-    bottom: 30px;
-    right: 30px;
-    transform: scale(0.4);
-    transform-origin: bottom right;
+  bottom: 30px;
+  right: 30px;
+  transform: scale(0.4);
+  transform-origin: bottom right;
 }
 
 .game-location-image--not-minimized {
-    bottom: 50%;
-    right: 50%;
-    transform-origin: bottom right;
-    transform: scale(1) translate(50%, 50%);
+  bottom: 50%;
+  right: 50%;
+  transform-origin: bottom right;
+  transform: scale(1) translate(50%, 50%);
 }
