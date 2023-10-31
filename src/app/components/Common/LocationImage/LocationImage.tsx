@@ -27,13 +27,22 @@ const LocationImage: React.FC<LocationImageProps> = (
             
     }, [props.region]);
 
+    // console.log({width: `${props.size}%`, height: `${props.size}%`});
+
     return locationData ? (
-        <div style={{width: `${props.size}px`, height: `${props.size}px`}}>
+        // <div className='relative w-full md:w-1/2 lg:w-1/3'>
+        // <div className='relative' style={{
+        //     height: '100vw',
+        // }}>
+        // <div className='relative' style={{width: `${props.size}px`, height: `${props.size}px`}}>
+        <div className='relative w-full h-full'>
             <Image fill
             src={`/regions/${props.region}/locations/${locationData.filename}`}
             alt="A location."
             style={{objectFit: 'cover'}}
             className='rounded-3xl'
+            priority={props.priority}
+            // sizes='(max-width: 640px) 100vw, 50vw'
         />
         </div>
     ): null;

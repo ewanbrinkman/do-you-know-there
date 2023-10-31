@@ -1,6 +1,4 @@
-/* Need ::before and content: '' to block the map, since can set pointer-events: none when want to block the map. */
-
-.game-location__background--minimized::before {
+.game-map__overlay--minimized::before {
     content: '';
     position: absolute;
     top: 0;
@@ -8,20 +6,19 @@
     bottom: 0;
     left: 0;
     pointer-events: none;
-    z-index: 3;
+    z-index: 1;
     transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.game-location__background--not-minimized::before {
+.game-map__overlay--not-minimized::before {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    /* pointer-events: none; */
     background-color: black;
     opacity: 0.7;
-    z-index: 3;
+    z-index: 1;
     transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }

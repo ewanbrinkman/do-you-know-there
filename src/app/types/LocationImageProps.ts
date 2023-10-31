@@ -1,7 +1,8 @@
-interface LocationImageProps {
-    region: string;
-    id: number;
+import BaseLocationImageProps from "@typings/BaseLocationImageProps";
+
+interface LocationImageProps extends BaseLocationImageProps {
     size: number;
+    priority: boolean;
 }
 
 export default LocationImageProps;

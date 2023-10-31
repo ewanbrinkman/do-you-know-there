@@ -1,6 +1,6 @@
-import LocationImageProps from '@typings/LocationImageProps';
+import BaseLocationImageProps from "@typings/BaseLocationImageProps";
 
-interface GameLocationImageProps extends LocationImageProps {
+interface GameLocationImageProps extends BaseLocationImageProps {
     region: string;
     minimized: boolean;
     setMinimized: (value: boolean) => void;
