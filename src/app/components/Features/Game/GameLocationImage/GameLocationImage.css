@@ -1,5 +1,4 @@
 .game-location-image {
-    position: absolute;
     transition: transform 0.3s ease-in-out, bottom 0.3s ease-in-out,
         right 0.3s ease-in-out;
 }

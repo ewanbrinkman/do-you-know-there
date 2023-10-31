@@ -35,13 +35,14 @@ const LocationImage: React.FC<LocationImageProps> = (
         //     height: '100vw',
         // }}>
         // <div className='relative' style={{width: `${props.size}px`, height: `${props.size}px`}}>
-        <div className='relative w-full h-full'>
+        <div className={props.className}>
             <Image fill
             src={`/regions/${props.region}/locations/${locationData.filename}`}
             alt="A location."
             style={{objectFit: 'cover'}}
             className='rounded-3xl'
-            priority={props.priority}
+            priority={props.priority === undefined ? false : props.priority}
+            onClick={props.onClick}
             // sizes='(max-width: 640px) 100vw, 50vw'
         />
         </div>

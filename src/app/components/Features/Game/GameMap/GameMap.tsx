@@ -13,7 +13,6 @@ const MapClickHandler: React.FC = () => {
   const map = useMapEvents({
     click: (e) => {
       const { lat, lng } = e.latlng;
-      console.log(lat, lng);
       L.marker([lat, lng], { icon }).addTo(map);
     },
   });
