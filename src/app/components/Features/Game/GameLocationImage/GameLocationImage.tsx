@@ -1,6 +1,6 @@
 import React from 'react';
 import GameLocationImageProps from '@typings/GameLocationImageProps';
-import LocationImage from '@components/Common/LocationImage/LocationImage';
+import LocationImage from '@components/Common/LocationImage';
 import './GameLocationImage.css';
 
 const GameLocationImage: React.FC<GameLocationImageProps> = (

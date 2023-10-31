@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import '@styles/globals.css';
-import Navbar from '@components/Layouts/Navbar';
+import Navbar from '@/app/components/Layouts/Navbar/Navbar';
 
 export const metadata: Metadata = {
     title: 'Do You Know There',

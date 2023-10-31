@@ -1,10 +1,7 @@
-import MapType from '@typings/MapType';
+import BaseMapProps from '@typings/BaseMapProps';
 
-interface MapProps {
-    mapType: MapType;
-    className?: string;
-    minimized: boolean;
-    setMinimized: (value: boolean) => void;
+interface MapProps extends BaseMapProps {
+    clickHandler: React.FC;
 }
 
 export default MapProps;
