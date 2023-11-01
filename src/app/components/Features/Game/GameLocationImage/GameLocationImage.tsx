@@ -34,7 +34,7 @@ const GameLocationImage: React.FC<GameLocationImageProps> = (
   }, []);
 
   return (
-    <div className={`absolute z-10 w-1/2 h-1/2 aspect-square game-location-image ${
+    <div className={`absolute z-10 h-1/2 aspect-square game-location-image ${
         props.minimized
           ? "game-location-image--minimized"
           : "game-location-image--not-minimized"
