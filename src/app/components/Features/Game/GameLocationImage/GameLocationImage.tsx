@@ -34,23 +34,12 @@ const GameLocationImage: React.FC<GameLocationImageProps> = (
   }, []);
 
   return (
-    // <div className={`absolute z-10 h-1/2 game-location-image ${
-    //     props.minimized
-    //       ? "game-location-image--minimized"
-    //       : "game-location-image--not-minimized"
-    //   }`}
-      // style={{
-      //   display: 'flex',
-      //   justifyContent: 'center',
-      //   alignItems: 'center',
-      // }}>
       <LocationImage
         region={props.region}
         id={props.id}
         size={400}
         priority={true}
         onClick={toggleMinimized}
-        // className={`absolute z-10 aspect-square w-1/2 h-1/2 game-location-image ${
         className={`absolute z-10 game-location-image ${
           props.minimized
             ? "game-location-image--minimized"
@@ -60,28 +49,7 @@ const GameLocationImage: React.FC<GameLocationImageProps> = (
             width: `${Math.min(containerSize.width, containerSize.height) * 0.75}px`,
             height: `${Math.min(containerSize.width, containerSize.height) * 0.75}px`,
         }}
-        // style={{
-        //     width: `${Math.min(containerSize.width, containerSize.height)}px`,
-        //     height: `${Math.min(containerSize.width, containerSize.height)}px`,
-        //     overflow: 'hidden',
-        // }}
-        // style={{
-        //     width: '100%',
-        //     paddingTop: '100%',
-        //     // backgroundColor:     '#3498db',
-        // }}
-        // className={`absolute z-10 w-1/2 h-1/2 aspect-square game-location-image ${
-        //     props.minimized
-        //       ? "game-location-image--minimized"
-        //       : "game-location-image--not-minimized"
-        //   }`}
-
-        //   className={`absolute z-10 spect-square game-location-image ${
-        
-        //   style={{maxWidth: '50%', maxHeight: '50%'}}
-        //   style={{'maxWidth': '50%', 'maxHeight': '50%', 'aspectRatio': '1/1'}}
       />
-    // </div>
   );
 };
 
