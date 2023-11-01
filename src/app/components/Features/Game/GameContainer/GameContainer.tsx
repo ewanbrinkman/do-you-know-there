@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import GameLocationImage from '@components/Features/Game/GameLocationImage';
 import MapType from '@typings/MapType';
 import dynamic from 'next/dynamic';
@@ -11,8 +11,10 @@ const GameMap = dynamic(() => import('@components/Features/Game/GameMap'), {
 const GameContainer: React.FC = () => {
     const [minimized, setMinimized] = useState(false);
 
+    const parentContainerRef = useRef(null);
+
     return (
-        <div className="flex-grow relative">
+        <div ref={parentContainerRef} className="flex-grow relative">
             <GameMap
                 mapType={MapType.SFUBurnaby}
                 className="w-full h-full z-0"
@@ -24,6 +26,7 @@ const GameContainer: React.FC = () => {
                 id={1}
                 minimized={minimized}
                 setMinimized={setMinimized}
+                containerRef={parentContainerRef}
             />
         </div>
     );

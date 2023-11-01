@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import GameLocationImageProps from "@typings/GameLocationImageProps";
 import LocationImage from "@components/Common/LocationImage";
 import "./GameLocationImage.css";
@@ -14,7 +14,7 @@ const GameLocationImage: React.FC<GameLocationImageProps> = (
   const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
-    const container = document.querySelector('.game-location-image');
+    const container = props.containerRef.current;
 
     const updateContainerSize = () => {
         if (container) {
@@ -34,27 +34,37 @@ const GameLocationImage: React.FC<GameLocationImageProps> = (
   }, []);
 
   return (
-    <div className={`absolute z-10 h-1/2 aspect-square game-location-image ${
-        props.minimized
-          ? "game-location-image--minimized"
-          : "game-location-image--not-minimized"
-      }`}
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}>
+    // <div className={`absolute z-10 h-1/2 game-location-image ${
+    //     props.minimized
+    //       ? "game-location-image--minimized"
+    //       : "game-location-image--not-minimized"
+    //   }`}
+      // style={{
+      //   display: 'flex',
+      //   justifyContent: 'center',
+      //   alignItems: 'center',
+      // }}>
       <LocationImage
         region={props.region}
         id={props.id}
         size={400}
         priority={true}
         onClick={toggleMinimized}
+        // className={`absolute z-10 aspect-square w-1/2 h-1/2 game-location-image ${
+        className={`absolute z-10 game-location-image ${
+          props.minimized
+            ? "game-location-image--minimized"
+            : "game-location-image--not-minimized"
+        }`}
         style={{
-            width: `${Math.min(containerSize.width, containerSize.height)}px`,
-            height: `${Math.min(containerSize.width, containerSize.height)}px`,
-            overflow: 'hidden',
+            width: `${Math.min(containerSize.width, containerSize.height) * 0.75}px`,
+            height: `${Math.min(containerSize.width, containerSize.height) * 0.75}px`,
         }}
+        // style={{
+        //     width: `${Math.min(containerSize.width, containerSize.height)}px`,
+        //     height: `${Math.min(containerSize.width, containerSize.height)}px`,
+        //     overflow: 'hidden',
+        // }}
         // style={{
         //     width: '100%',
         //     paddingTop: '100%',
@@ -71,7 +81,7 @@ const GameLocationImage: React.FC<GameLocationImageProps> = (
         //   style={{maxWidth: '50%', maxHeight: '50%'}}
         //   style={{'maxWidth': '50%', 'maxHeight': '50%', 'aspectRatio': '1/1'}}
       />
-    </div>
+    // </div>
   );
 };
 
