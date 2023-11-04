@@ -1,6 +1,7 @@
 "use client";
 import "leaflet/dist/leaflet.css";
 import React from "react";
+// import ReactDom from 'react-dom';
 import L from "leaflet";
 import { useMapEvents } from "react-leaflet";
 import icon from "@icons/icon";
@@ -8,6 +9,7 @@ import type MapProps from "@typings/MapProps";
 import type GameMapProps from "@typings/GameMapProps";
 import Map from "@components/Common/Map";
 import "./GameMap.css";
+import LocationImage from '@components/Common/LocationImage';
 
 const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
   const MapClickHandler: React.FC = () => {
@@ -33,7 +35,15 @@ const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
           ],
           { icon }
         ).addTo(map);
-        correctMarker.bindPopup(`<img src="/regions/${props.region}/locations/${props.locationData.filename}" alt="${props.locationData.name}" width="200" height="200">`);
+        
+        // Create the popup showing the correct location.
+        // const popupContainer = document.createElement('div');
+        // ReactDOM.render(<LocationImage region={props.region} id={props.locationData.id}/>, popupContainer);
+
+        const correctPopup = L.popup({}).setContent(
+          `<img src="/regions/${props.region}/locations/${props.locationData.filename}" alt="${props.locationData.name}" width="200" height="200">`
+        );
+        correctMarker.bindPopup(correctPopup).openPopup();
 
         const latlngs = [guessMarker.getLatLng(), correctMarker.getLatLng()];
 
@@ -43,7 +53,6 @@ const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
         }).addTo(map);
 
         props.createOrUpdateRemoveGuessMapInfo(() => {
-          console.log('aaaabbbccc');
           guessMarker.remove();
           correctMarker.remove();
           markerLine.remove();
