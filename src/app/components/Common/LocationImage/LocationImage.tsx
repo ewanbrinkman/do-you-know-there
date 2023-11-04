@@ -23,7 +23,7 @@ const LocationImage: React.FC<LocationImageProps> = (
             });
 
             
-    }, [props.region]);
+    }, [props.region, props.id]);
 
     return props.locationData ? (
         <div className={`${props.className}`} style={{width: props.size, height: props.size, ...props.style}}>

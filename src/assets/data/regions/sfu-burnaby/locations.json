@@ -22,5 +22,29 @@
             "lng": -122.91716873645784
         },
         "keywords": ["fog", "fish-pond"]
+    },
+    {
+        "id": 3,
+        "filename": "dark-snowy-road.jpg",
+        "name": "Dark Snowy Road",
+        "difficulty": 3,
+        "hint": "Lots of buses go near here.",
+        "coordinates": {
+            "lat": 49.279312566741346,
+            "lng": -122.91204035282136
+        },
+        "keywords": ["snow", "road", "dark"]
+    },
+    {
+        "id": 4,
+        "filename": "sub-dark.jpg",
+        "name": "Dark SUB",
+        "difficulty": 1,
+        "hint": "Near the AQ.",
+        "coordinates": {
+            "lat": 49.279109589718836,
+            "lng": -122.91802167892457
+        },
+        "keywords": ["dark", "building", "sub"]
     }
 ]

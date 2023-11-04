@@ -21,6 +21,8 @@ const GameContainer: React.FC = () => {
     removeGuessMapInfo.current = newRemoveGuessMapInfo;
   };
 
+  const [locationId, setLocationid] = useState(1);
+
   return (
     <div
       ref={parentContainerRef}
@@ -55,6 +57,8 @@ const GameContainer: React.FC = () => {
           onClick={() => {
             setGuessed(false);
             removeGuessMapInfo.current?.();
+            setMinimized(false);
+            setLocationid((currentLocationId) => currentLocationId + 1);
           }}
         >
           Next
@@ -62,7 +66,7 @@ const GameContainer: React.FC = () => {
       ) : (
         <GameLocationImage
           region={MapType.SFUBurnaby}
-          id={1}
+          id={locationId}
           minimized={minimized}
           setMinimized={setMinimized}
           containerRef={parentContainerRef}
