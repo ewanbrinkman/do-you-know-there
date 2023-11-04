@@ -7,22 +7,55 @@ import icon from "@icons/icon";
 import type MapProps from "@typings/MapProps";
 import type GameMapProps from "@typings/GameMapProps";
 import Map from "@components/Common/Map";
-import './GameMap.css';
-
-const MapClickHandler: React.FC = () => {
-  const map = useMapEvents({
-    click: (e) => {
-      const { lat, lng } = e.latlng;
-      L.marker([lat, lng], { icon }).addTo(map);
-    },
-  });
-
-  return null;
-};
+import "./GameMap.css";
 
 const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
+  const MapClickHandler: React.FC = () => {
+    const map = useMapEvents({
+      click: (e) => {
+        if (!props.locationData || props.guessed) {
+          // Location data hasn't been set yet.
+          return;
+        }
+
+        props.onGuess();
+
+        // Display the location guessed by the player.
+        const guessMarker = L.marker([e.latlng.lat, e.latlng.lng], {
+          icon,
+        }).addTo(map);
+
+        // Display the correct location.
+        const correctMarker = L.marker(
+          [
+            props.locationData.coordinates.lat,
+            props.locationData.coordinates.lng,
+          ],
+          { icon }
+        ).addTo(map);
+        correctMarker.bindPopup(`<img src="/regions/${props.region}/locations/${props.locationData.filename}" alt="${props.locationData.name}" width="200" height="200">`);
+
+        const latlngs = [guessMarker.getLatLng(), correctMarker.getLatLng()];
+
+        const markerLine = L.polyline(latlngs, {
+          color: "blue",
+          dashArray: "5, 10", // number of pixels drawns, number of pixels skipped
+        }).addTo(map);
+
+        props.createOrUpdateRemoveGuessMapInfo(() => {
+          console.log('aaaabbbccc');
+          guessMarker.remove();
+          correctMarker.remove();
+          markerLine.remove();
+        });
+      },
+    });
+
+    return null;
+  };
+
   const mapProps: MapProps = {
-    mapType: props.mapType,
+    region: props.region,
     className: props.className,
     clickHandler: MapClickHandler,
   };

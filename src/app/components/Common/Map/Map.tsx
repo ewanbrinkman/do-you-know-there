@@ -8,7 +8,7 @@ import type MapData from '@typings/MapData';
 import type MapType from '@typings/MapType';
 
 const Map: React.FC<MapProps> = (props: MapProps) => {
-    const [mapType, setMapType] = useState<MapType>(props.mapType);
+    const [mapType, setMapType] = useState<MapType>(props.region);
     const [mapData, setMapData] = useState<MapData | null>(null);
 
     useEffect(() => {

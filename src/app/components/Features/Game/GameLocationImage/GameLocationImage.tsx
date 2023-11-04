@@ -37,7 +37,6 @@ const GameLocationImage: React.FC<GameLocationImageProps> = (
       <LocationImage
         region={props.region}
         id={props.id}
-        size={400}
         priority={true}
         onClick={toggleMinimized}
         className={`absolute z-10 game-location-image ${
@@ -45,10 +44,9 @@ const GameLocationImage: React.FC<GameLocationImageProps> = (
             ? "game-location-image--minimized"
             : "game-location-image--not-minimized"
         }`}
-        style={{
-            width: `${Math.min(containerSize.width, containerSize.height) * 0.75}px`,
-            height: `${Math.min(containerSize.width, containerSize.height) * 0.75}px`,
-        }}
+        size={`${Math.min(containerSize.width, containerSize.height) * 0.75}px`}
+        locationData={props.locationData}
+        setLocationData={props.setLocationData}
       />
   );
 };

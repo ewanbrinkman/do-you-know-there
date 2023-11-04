@@ -1,7 +1,7 @@
 import MapType from '@typings/MapType';
 
 interface BaseMapProps {
-    mapType: MapType;
+    region: MapType;
     className?: string;
 }
 

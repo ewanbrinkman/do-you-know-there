@@ -2,7 +2,7 @@ import BaseLocationImageProps from "@typings/BaseLocationImageProps";
 import { CSSProperties } from "react";
 
 interface LocationImageProps extends BaseLocationImageProps {
-    size: number;
+    size: string;
     priority?: boolean;
     onClick?: (event: React.MouseEvent<HTMLElement>) => void;
     className?: string;
