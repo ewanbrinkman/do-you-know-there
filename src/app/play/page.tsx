@@ -1,9 +1,7 @@
 import GameContainer from '@components/Features/Game/GameContainer';
 
 function Game() {
-    return (
-        <GameContainer />
-    );
+    return <GameContainer />;
 }
 
 export default Game;

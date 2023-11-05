@@ -1,7 +1,7 @@
-import MapType from '@typings/MapType';
+import MapArea from '@/app/types/data/MapArea';
 
 interface BaseMapProps {
-    region: MapType;
+    area: MapArea;
     className?: string;
 }
 

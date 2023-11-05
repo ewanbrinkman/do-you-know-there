@@ -7,11 +7,11 @@ interface MapData {
         southwest: {
             lat: number;
             lng: number;
-        },
+        };
         northeast: {
             lat: number;
             lng: number;
-        }
+        };
     };
     zoom: {
         initial: number;

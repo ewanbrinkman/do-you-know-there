@@ -1,5 +1,5 @@
-import BaseLocationImageProps from "@typings/BaseLocationImageProps";
-import { CSSProperties } from "react";
+import BaseLocationImageProps from '@/app/types/locationImage/BaseLocationImageProps';
+import { CSSProperties } from 'react';
 
 interface LocationImageProps extends BaseLocationImageProps {
     size: string;

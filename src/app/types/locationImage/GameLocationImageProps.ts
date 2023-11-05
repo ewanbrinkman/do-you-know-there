@@ -1,8 +1,7 @@
 import React from 'react';
-import BaseLocationImageProps from "@typings/BaseLocationImageProps";
+import BaseLocationImageProps from '@/app/types/locationImage/BaseLocationImageProps';
 
 interface GameLocationImageProps extends BaseLocationImageProps {
-    region: string;
     minimized: boolean;
     setMinimized: (value: boolean) => void;
     containerRef: React.RefObject<HTMLElement | null>;
