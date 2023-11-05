@@ -1,7 +1,7 @@
-import MapArea from '@/app/types/data/MapArea';
+import MapData from '@/app/types/data/MapData';
 
 interface BaseMapProps {
-    area: MapArea;
+    mapData: MapData | null;
     className?: string;
 }
 

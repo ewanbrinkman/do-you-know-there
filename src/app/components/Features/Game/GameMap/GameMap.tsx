@@ -15,7 +15,7 @@ const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
     const MapClickHandler: React.FC = () => {
         const map = useMapEvents({
             click: (e) => {
-                if (!props.locationData || props.guessed) {
+                if (!props.locationData || props.guessed || !props.mapData) {
                     // Location data hasn't been set yet.
                     return;
                 }
@@ -43,7 +43,7 @@ const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
                 // ReactDOM.render(<LocationImage area={props.area} id={props.locationData.id}/>, popupContainer);
 
                 const correctPopup = L.popup({}).setContent(
-                    `<img src="/areas/${props.area}/locations/${props.locationData.filename}" alt="${props.locationData.name}" width="200" height="200">`,
+                    `<img src="/areas/${props.locationData.area}/locations/${props.locationData.filename}" alt="${props.locationData.name}" width="200" height="200">`,
                 );
                 correctMarker.bindPopup(correctPopup).openPopup();
 
@@ -57,6 +57,8 @@ const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
                     dashArray: '5, 10', // number of pixels drawns, number of pixels skipped
                 }).addTo(map);
 
+                map.setZoom(props.mapData.zoom.initial);
+
                 props.createOrUpdateRemoveGuessMapInfo(() => {
                     guessMarker.remove();
                     correctMarker.remove();
@@ -69,7 +71,7 @@ const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
     };
 
     const mapProps: MapProps = {
-        area: props.area,
+        mapData: props.mapData,
         className: props.className,
         clickHandler: MapClickHandler,
     };

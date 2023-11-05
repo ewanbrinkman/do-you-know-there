@@ -1,7 +1,4 @@
-import MapArea from '@/app/types/data/MapArea';
-
 interface MapData {
-    area: MapArea;
     center: {
         lat: number;
         lng: number;
