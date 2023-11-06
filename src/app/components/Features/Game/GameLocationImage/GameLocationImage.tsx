@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import GameLocationImageProps from '@/app/types/locationImage/GameLocationImageProps';
+import GameLocationImageProps from '@typings/locationImage/GameLocationImageProps';
 import LocationImage from '@components/Common/LocationImage';
 import './GameLocationImage.css';
 

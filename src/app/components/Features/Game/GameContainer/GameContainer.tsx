@@ -1,12 +1,12 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
 import GameLocationImage from '@components/Features/Game/GameLocationImage';
-import MapArea from '@/app/types/data/MapArea';
-import MapData from '@/app/types/data/MapData';
-import RawMapData from '@/app/types/data/RawMapData';
-import LocationData from '@/app/types/data/LocationData';
+import MapArea from '@typings/data/MapArea';
+import MapData from '@typings/data/MapData';
+import LocationData from '@typings/data/LocationData';
 import dynamic from 'next/dynamic';
-import RawLocationData from '@/app/types/data/RawLocationData';
+import RawLocationData from '@typings/data/RawLocationData';
+import loadMapData from '@utils/loaders/loadMapData';
 import gameConfig from '@config/game.json';
 const GameMap = dynamic(() => import('@components/Features/Game/GameMap'), {
     loading: () => <p>Map is loading...</p>,
@@ -42,20 +42,9 @@ const GameContainer: React.FC = () => {
 
     // Update map data, when the area changes.
     useEffect(() => {
-        import(`@assets/data/areas/${area}/map.json`)
-            .then((module) => {
-                const rawMapData: RawMapData = module.default;
-                const newMapData: MapData = {
-                    ...rawMapData,
-                    area: area,
-                };
-                setMapData(newMapData);
-            })
-            .catch((error) => {
-                console.error(
-                    `Failed to load map data for area ${area}: ${error}`,
-                );
-            });
+        loadMapData(area).then((newMapData: MapData) => {
+            setMapData(newMapData);
+        });
     }, [area]);
 
     // Update the list of all location data of the area, when the area changes.

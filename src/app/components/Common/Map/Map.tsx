@@ -2,7 +2,7 @@ import 'leaflet/dist/leaflet.css';
 import React from 'react';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import mapConfig from '@config/map.json';
-import type MapProps from '@/app/types/map/MapProps';
+import type MapProps from '@typings/map/MapProps';
 
 const Map: React.FC<MapProps> = (props: MapProps) => {
     const ClickHandler = props.clickHandler;

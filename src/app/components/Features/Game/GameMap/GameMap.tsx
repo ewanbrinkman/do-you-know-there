@@ -9,11 +9,11 @@ import React from 'react';
 import L from 'leaflet';
 import { useMapEvents } from 'react-leaflet';
 import icon from '@icons/icon';
-import type MapProps from '@/app/types/map/MapProps';
-import type GameMapProps from '@/app/types/map/GameMapProps';
+import type MapProps from '@typings/map/MapProps';
+import type GameMapProps from '@typings/map/GameMapProps';
 import Map from '@components/Common/Map';
 import './GameMap.css';
-import LocationImage from '@components/Common/LocationImage';
+// import LocationImage from '@components/Common/LocationImage';
 
 // const getData = async (component: any) => {
 //   const ReactDOMServer = (await import('react-dom/server')).default;

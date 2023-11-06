@@ -1,5 +1,5 @@
 import React from 'react';
-import LocationImageProps from '@/app/types/locationImage/LocationImageProps';
+import LocationImageProps from '@typings/locationImage/LocationImageProps';
 import Image from 'next/image';
 
 const LocationImage: React.FC<LocationImageProps> = (
