@@ -30,8 +30,10 @@ const Home: React.FC = () => {
                 alignItems: 'center',
             }}
         >
-            <div className='absolute z-10'>
-                <h1 className='' style={{ fontSize: '3rem' }}>Do You Know {area}</h1>
+            <div className="absolute z-10">
+                <h1 className="" style={{ fontSize: '3rem' }}>
+                    Do You Know {area}
+                </h1>
                 <Link
                     className="text-blue-500 hover:text-blue-700 text-lg"
                     href="/play"
