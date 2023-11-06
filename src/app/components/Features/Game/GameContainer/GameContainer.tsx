@@ -4,10 +4,10 @@ import GameLocationImage from '@components/Features/Game/GameLocationImage';
 import MapArea from '@typings/data/MapArea';
 import MapData from '@typings/data/MapData';
 import LocationData from '@typings/data/LocationData';
-import dynamic from 'next/dynamic';
 import RawLocationData from '@typings/data/RawLocationData';
 import loadMapData from '@utils/loaders/loadMapData';
 import gameConfig from '@config/game.json';
+import dynamic from 'next/dynamic';
 const GameMap = dynamic(() => import('@components/Features/Game/GameMap'), {
     loading: () => <p>Map is loading...</p>,
     ssr: false,

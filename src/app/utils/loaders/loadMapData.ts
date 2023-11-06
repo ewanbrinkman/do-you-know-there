@@ -1,6 +1,6 @@
-import RawMapData from "@typings/data/RawMapData";
-import MapArea from "@typings/data/MapArea";
-import MapData from "@typings/data/MapData";
+import RawMapData from '@typings/data/RawMapData';
+import MapArea from '@typings/data/MapArea';
+import MapData from '@typings/data/MapData';
 
 export default async function loadMapData(area: MapArea): Promise<MapData> {
     try {
@@ -12,9 +12,7 @@ export default async function loadMapData(area: MapArea): Promise<MapData> {
         };
         return newMapData;
     } catch (error) {
-        console.error(
-            `Failed to load map data for area ${area}.`,
-        );
+        console.error(`Failed to load map data for area ${area}.`);
         throw error;
     }
 }

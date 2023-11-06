@@ -46,7 +46,7 @@ const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
     const MapClickHandler: React.FC = () => {
         const map = useMapEvents({
             click: async (e) => {
-            // click: (e) => {
+                // click: (e) => {
                 if (!props.locationData || props.guessed || !props.mapData) {
                     // Location data hasn't been set yet.
                     return;
