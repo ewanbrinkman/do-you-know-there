@@ -42,9 +42,11 @@ const GameLocationImage: React.FC<GameLocationImageProps> = (
                     ? 'game-location-image--minimized'
                     : 'game-location-image--not-minimized'
             }`}
-            size={`${
-                Math.min(containerSize.width, containerSize.height) * 0.75
-            }px`}
+            style={{
+              maxWidth: '75%',
+              maxHeight: '75%',
+            }}
+            size={Math.min(containerSize.width, containerSize.height) * 0.75}
         />
     );
 };
