@@ -164,7 +164,6 @@ const GameContainer: React.FC = () => {
                     locationData={locationData}
                     minimized={minimized}
                     setMinimized={setMinimized}
-                    containerRef={parentContainerRef}
                 />
             )}
         </div>
