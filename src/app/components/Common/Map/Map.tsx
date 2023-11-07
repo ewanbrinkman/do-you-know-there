@@ -12,6 +12,7 @@ const Map: React.FC<MapProps> = (props: MapProps) => {
             className={props.className}
             center={[props.mapData.center.lat, props.mapData.center.lng]}
             zoom={props.mapData.zoom.initial}
+            zoomControl={props.zoomControl === undefined ? true : props.zoomControl}
             scrollWheelZoom={true}
             maxBounds={[
                 [

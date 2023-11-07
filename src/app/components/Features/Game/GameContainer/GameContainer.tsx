@@ -9,7 +9,7 @@ import loadMapData from '@utils/loaders/loadMapData';
 import gameConfig from '@config/game.json';
 import dynamic from 'next/dynamic';
 const GameMap = dynamic(() => import('@components/Features/Game/GameMap'), {
-    loading: () => <p>Map is loading...</p>,
+    loading: () => null,
     ssr: false,
 });
 

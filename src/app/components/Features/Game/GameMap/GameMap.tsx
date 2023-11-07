@@ -67,6 +67,7 @@ const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
         mapData: props.mapData,
         className: props.className,
         clickHandler: MapClickHandler,
+        zoomControl: true,
     };
 
     return (
