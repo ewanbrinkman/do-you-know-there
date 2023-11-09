@@ -115,11 +115,11 @@ const GameContainer: React.FC = () => {
     return (
         <div
             ref={parentContainerRef}
-            className="flex-grow relative"
+            className="flex flex-grow relative justify-center items-center"
             style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
+                // display: 'flex',
+                // justifyContent: 'center',
+                // alignItems: 'center',
             }}
         >
             {/* <button className='absolute z-10' style={{bottom: '30px'}}>Next</button> */}
