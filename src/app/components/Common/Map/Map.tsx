@@ -11,8 +11,10 @@ const Map: React.FC<MapProps> = (props: MapProps) => {
         <MapContainer
             className={props.className}
             center={[props.mapData.center.lat, props.mapData.center.lng]}
-            zoom={props.mapData.zoom.initial}
-            zoomControl={props.zoomControl === undefined ? true : props.zoomControl}
+            zoom={props.mapData.zoom.initial.baseScreen}
+            zoomControl={
+                props.zoomControl === undefined ? true : props.zoomControl
+            }
             scrollWheelZoom={true}
             maxBounds={[
                 [
@@ -24,10 +26,10 @@ const Map: React.FC<MapProps> = (props: MapProps) => {
                     props.mapData.maxBounds.northeast.lng,
                 ],
             ]}
-            minZoom={props.mapData.zoom.min}
+            minZoom={props.mapData.zoom.min.baseScreen}
         >
             <TileLayer
-                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
                 url={mapConfig.url}
             />
             {ClickHandler !== undefined && <ClickHandler />}

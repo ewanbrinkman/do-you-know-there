@@ -46,11 +46,11 @@ const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
                 ];
 
                 const markerLine = L.polyline(latlngs, {
-                    color: 'blue',
+                    color: '#005234',
                     dashArray: '5, 10', // number of pixels drawns, number of pixels skipped
                 }).addTo(map);
 
-                map.setZoom(props.mapData.zoom.initial);
+                map.setZoom(props.mapData.zoom.initial.baseScreen);
 
                 props.createOrUpdateRemoveGuessMapInfo(() => {
                     guessMarker.remove();

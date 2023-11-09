@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import '@styles/globals.css';
-import Navbar from '@/app/components/Layouts/Navbar/Navbar';
+import Navbar from '@/app/components/Layouts/Navbar';
 
 export const metadata: Metadata = {
     title: 'Do You Know There',
@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className="flex flex-col h-screen">
+            <body className="flex flex-col h-dscreen">
                 <Navbar />
                 {children}
             </body>

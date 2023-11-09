@@ -17,8 +17,14 @@ interface MapData {
         };
     };
     zoom: {
-        initial: number;
-        min: number;
+        initial: {
+            baseScreen: number,
+            smallScreen: number,
+        };
+        min: {
+            baseScreen: number,
+            smallScreen: number,
+        };
     };
 }
 

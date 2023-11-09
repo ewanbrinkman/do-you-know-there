@@ -7,6 +7,7 @@ import loadMapData from '@utils/loaders/loadMapData';
 import loadMapInfo from '@utils/loaders/loadMapInfo';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import Button from '@components/Common/Button';
 const Map = dynamic(() => import('@components/Common/Map'), {
     loading: () => null,
     ssr: false,
@@ -37,23 +38,13 @@ const Home: React.FC = () => {
             }}
         >
             <div className="pointer-events-none z-10 absolute flex flex-col items-center">
-                <h1
-                    className="pointer-events-auto text-primary-color bg-secondary-color font-extrabold rounded-lg p-4 mx-16 text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
-                    // style={{ textShadow: '2px 2px 5px rgb(0, 0, 0, 0.5)' }}
-                >
+                <h1 className="pointer-events-auto mb-16 text-center text-primary-color bg-secondary-color font-extrabold rounded-lg p-4 mx-16 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
                     Do You Know {mapInfo ? mapInfo.name : 'There'}?
                 </h1>
-                <button className="pointer-events-auto text-primary-color bg-secondary-color mt-16 rounded-md py-2 px-4 transition duration-300 hover:bg-secondary-color-dark ease-in-out text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-3xl">
-                    Play
-                </button>
-                {/* <div className="bg-secondary-color rounded-lg p-4 mt-16">
-                    <button
-                        className="text-primary-color hover:text-white text-lg"
-                        // href="/play"
-                    >
-                        Play
-                    </button>
-                </div> */}
+                <p className="pointer-events-auto mb-16 text-center text-primary-color bg-secondary-color rounded-lg p-4 mx-16 text-base md:text-lg">
+                    Choose where each picture was taken on the map.
+                </p>
+                <Button text="Play" href="/play" />
             </div>
             <Map
                 mapData={mapData}

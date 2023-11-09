@@ -8,6 +8,7 @@ import RawLocationData from '@typings/data/RawLocationData';
 import loadMapData from '@utils/loaders/loadMapData';
 import gameConfig from '@config/game.json';
 import dynamic from 'next/dynamic';
+import Button from '@components/Common/Button';
 const GameMap = dynamic(() => import('@components/Features/Game/GameMap'), {
     loading: () => null,
     ssr: false,
@@ -141,9 +142,9 @@ const GameContainer: React.FC = () => {
                 }
             />
             {guessed ? (
-                <button
-                    className="absolute z-10 bg-blue-500 text-white font-semibold py-2 px-4 rounded-full shadow-md hover:bg-blue-700 transition duration-300 ease-in-out"
-                    style={{ bottom: '30px' }}
+                <Button
+                    text="Next"
+                    className="z-10 absolute bottom-[50px]"
                     onClick={() => {
                         setLocationsGuessedAmount((current) => current++);
                         setGuessed(false);
@@ -156,9 +157,7 @@ const GameContainer: React.FC = () => {
                             console.log('Game finished');
                         }
                     }}
-                >
-                    Next
-                </button>
+                />
             ) : (
                 <GameLocationImage
                     locationData={locationData}
