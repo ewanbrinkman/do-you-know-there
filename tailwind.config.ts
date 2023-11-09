@@ -18,8 +18,8 @@ const config: Config = {
                 'tertiary-color-dark': '#1d4ed8',
             },
             height: {
-                dscreen: '100dvh'
-            }
+                dscreen: '100dvh', // Use 100dvh insteda of 100vh, so that it works on mobile.
+            },
         },
     },
     plugins: [],

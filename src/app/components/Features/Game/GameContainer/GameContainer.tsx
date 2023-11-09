@@ -116,11 +116,13 @@ const GameContainer: React.FC = () => {
         <div
             ref={parentContainerRef}
             className="flex flex-grow relative justify-center items-center"
-            style={{
-                // display: 'flex',
-                // justifyContent: 'center',
-                // alignItems: 'center',
-            }}
+            style={
+                {
+                    // display: 'flex',
+                    // justifyContent: 'center',
+                    // alignItems: 'center',
+                }
+            }
         >
             {/* <button className='absolute z-10' style={{bottom: '30px'}}>Next</button> */}
             <GameMap

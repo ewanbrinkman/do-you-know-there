@@ -18,12 +18,12 @@ interface MapData {
     };
     zoom: {
         initial: {
-            baseScreen: number,
-            smallScreen: number,
+            baseScreen: number;
+            smallScreen: number;
         };
         min: {
-            baseScreen: number,
-            smallScreen: number,
+            baseScreen: number;
+            smallScreen: number;
         };
     };
 }

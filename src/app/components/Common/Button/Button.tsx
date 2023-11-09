@@ -3,7 +3,8 @@ import ButtonProps from '@typings/common/button/ButtonProps';
 import Link from 'next/link';
 
 const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
-    const baseClassName: string = 'pointer-events-auto text-white bg-tertiary-color py-2 px-4 transition duration-300 ease-in-out hover:bg-tertiary-color-dark focus:bg-tertiary-color-dark text-2xl rounded-3xl';
+    const baseClassName: string =
+        'pointer-events-auto text-white bg-tertiary-color py-2 px-4 transition duration-300 ease-in-out hover:bg-tertiary-color-dark focus:bg-tertiary-color-dark text-2xl rounded-3xl';
 
     return props.href ? (
         <Link

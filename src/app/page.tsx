@@ -5,9 +5,9 @@ import MapData from '@typings/data/MapData';
 import MapInfo from '@typings/data/MapInfo';
 import loadMapData from '@utils/loaders/loadMapData';
 import loadMapInfo from '@utils/loaders/loadMapInfo';
-import dynamic from 'next/dynamic';
-import Link from 'next/link';
+import Container from '@components/Common/Container';
 import Button from '@components/Common/Button';
+import dynamic from 'next/dynamic';
 const Map = dynamic(() => import('@components/Common/Map'), {
     loading: () => null,
     ssr: false,
@@ -37,13 +37,17 @@ const Home: React.FC = () => {
                 alignItems: 'center',
             }}
         >
-            <div className="pointer-events-none z-10 absolute flex flex-col items-center">
-                <h1 className="pointer-events-auto mb-16 text-center text-primary-color bg-secondary-color font-extrabold rounded-lg p-4 mx-16 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
-                    Do You Know {mapInfo ? mapInfo.name : 'There'}?
-                </h1>
-                <p className="pointer-events-auto mb-16 text-center text-primary-color bg-secondary-color rounded-lg p-4 mx-16 text-base md:text-lg">
-                    Choose where each picture was taken on the map.
-                </p>
+            <div className="pointer-events-none z-10 absolute flex flex-col items-center space-y-16">
+                <Container className="pointer-events-auto">
+                    <h1 className="font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
+                        Do You Know {mapInfo ? mapInfo.name : 'There'}?
+                    </h1>
+                </Container>
+                <Container className="pointer-events-auto">
+                    <p className="text-base md:text-lg">
+                        Choose where each picture was taken on the map.
+                    </p>
+                </Container>
                 <Button text="Play" href="/play" />
             </div>
             <Map
