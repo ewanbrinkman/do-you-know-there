@@ -35,7 +35,7 @@ function Game() {
     return gameOver ? (
         <div className="flex flex-grow flex-col items-center p-8 space-y-8 bg-gradient-to-b from-white to-primary-color">
             <Container className="w-full sm:max-w-3xl mx-16">
-                <h1 className="text-3xl font-bold">Results Summary</h1>
+                <h1 className="text-3xl font-bold">Results</h1>
                 <p>
                     Total distance (lower is better): {totalDistance.toFixed(1)}
                     m

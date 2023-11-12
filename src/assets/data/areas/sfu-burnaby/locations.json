@@ -16,12 +16,12 @@
         "filename": "fish-pond-foggy.jpg",
         "name": "Foggy Fish Pond",
         "difficulty": 2,
-        "hint": "Not near any classes.",
+        "hint": "If the sun is in the picture, what direction and hence what side must the picture be taken from.",
         "coordinates": {
-            "lat": 49.278791124086126,
-            "lng": -122.91716873645784
+            "lat": 49.2789346088565,
+            "lng": -122.91710972785951
         },
-        "keywords": ["fog", "fish-pond"]
+        "keywords": ["fog", "fish-pond", "sun", "water"]
     },
     {
         "id": 3,
@@ -46,5 +46,101 @@
             "lng": -122.91802167892457
         },
         "keywords": ["dark", "building", "sub"]
+    },
+    {
+        "id": 5,
+        "filename": "looking-over-near-aq-pond.jpg",
+        "name": "Looking Over Pond Near AQ",
+        "difficulty": 3,
+        "hint": "Near the AQ.",
+        "coordinates": {
+            "lat": 49.27956803663402,
+            "lng": -122.91650354862215
+        },
+        "keywords": ["water", "light"]
+    },
+    {
+        "id": 6,
+        "filename": "bus-loop-foggy.jpg",
+        "name": "Bus Loop Foggy",
+        "difficulty": 1,
+        "hint": "Lots of buses are here.",
+        "coordinates": {
+            "lat": 49.27912358816098,
+            "lng": -122.91229248046876
+        },
+        "keywords": ["fog", "bus-loop"]
+    },
+    {
+        "id": 7,
+        "filename": "rotunda-top-west.jpg",
+        "name": "Rotunda Top",
+        "difficulty": 1,
+        "hint": "Look at the background.",
+        "coordinates": {
+            "lat": 49.27947704750892,
+            "lng": -122.92037129402162
+        },
+        "keywords": ["rotunda", "light"]
+    },
+    {
+        "id": 8,
+        "filename": "bridge-snowy.jpg",
+        "name": "Snowy Bridge",
+        "difficulty": 4,
+        "hint": "Near some shops.",
+        "coordinates": {
+            "lat": 49.27829117270483,
+            "lng": -122.9115498844786
+        },
+        "keywords": ["snow", "bridge"]
+    },
+    {
+        "id": 9,
+        "filename": "near-aq-pond-snowy.jpg",
+        "name": "Snowy Pond Near AQ",
+        "difficulty": 3,
+        "hint": "Near the AQ.",
+        "coordinates": {
+            "lat": 49.27964852687399,
+            "lng": -122.91641771793367
+        },
+        "keywords": ["water", "ice", "light", "snow"]
+    },
+    {
+        "id": 10,
+        "filename": "stairs-to-long-hall.png",
+        "name": "Stairs To Long Hall",
+        "difficulty": 2,
+        "hint": "Near the AQ.",
+        "coordinates": {
+            "lat": 49.2793510622893,
+            "lng": -122.91533946990968
+        },
+        "keywords": ["light", "stairs", "inside"]
+    },
+    {
+        "id": 11,
+        "filename": "rooftop-parking.jpg",
+        "name": "Rooftop Parking",
+        "difficulty": 2,
+        "hint": "Around WMC.",
+        "coordinates": {
+            "lat": 49.279921492796625,
+            "lng": -122.92310178279878
+        },
+        "keywords": ["light", "outside", "parking", "roof"]
+    },
+    {
+        "id": 12,
+        "filename": "library-view-from-rooftop-foggy.jpg",
+        "name": "Foggy Library View From Rooftop",
+        "difficulty": 1,
+        "hint": "Facing west.",
+        "coordinates": {
+            "lat": 49.279652026446676,
+            "lng": -122.91722238063812
+        },
+        "keywords": ["light", "outside", "fog", "roof", "library"]
     }
 ]

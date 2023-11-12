@@ -16,7 +16,7 @@ const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
                     return;
                 }
 
-                // console.log([e.latlng.lat, e.latlng.lng]);
+                console.log([e.latlng.lat, e.latlng.lng]);
 
                 props.onGuess();
 

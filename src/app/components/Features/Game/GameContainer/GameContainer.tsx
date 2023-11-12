@@ -161,7 +161,10 @@ const GameContainer: React.FC<GameContainerProps> = (
             />
             {guessed && (
                 <Container className="z-10 absolute top-[30px]">
-                    <p>Distance: {props.getLatestLocationResult().distance.toFixed(1)}m</p>
+                    <p>
+                        Distance:{' '}
+                        {props.getLatestLocationResult().distance.toFixed(1)}m
+                    </p>
                 </Container>
             )}
             {guessed ? (
