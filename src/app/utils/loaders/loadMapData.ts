@@ -6,8 +6,9 @@ export default async function loadMapData(
     area: MapArea,
 ): Promise<ProcessedMapData> {
     try {
-        const module = await import(`@assets/data/areas/${area}/map.json`);
-        const rawMapData: RawMapData = module.default;
+        const rawMapData: RawMapData = (
+            await import(`@assets/data/areas/${area}/map.json`)
+        ).default;
         const newMapData: ProcessedMapData = {
             ...rawMapData,
             area: area,
