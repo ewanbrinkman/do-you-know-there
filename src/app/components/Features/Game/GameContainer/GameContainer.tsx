@@ -100,7 +100,7 @@ const GameContainer: React.FC<GameContainerProps> = (
         }
 
         setLocationData(newLocationData);
-    }, [areaLocationData, locationId]);
+    }, [areaLocationData, locationId, area]);
 
     const pickLocationId = (locationIds: number[]) => {
         // Choose a new location Id that hasn't been picked yet.

@@ -9,7 +9,8 @@
         "start": "next start",
         "lint": "next lint",
         "format:check": "prettier --list-different '.'",
-        "format:fix": "prettier --write '.'"
+        "format:fix": "prettier --write '.'",
+        "deploy": "gh-pages -d out -b gh-pages -r https://github.com/ewanbrinkman/do-you-know-there.git"
     },
     "dependencies": {
         "leaflet": "^1.9.4",
@@ -26,6 +27,7 @@
         "autoprefixer": "^10",
         "eslint": "^8",
         "eslint-config-next": "14.0.0",
+        "gh-pages": "^6.0.0",
         "postcss": "^8",
         "prettier": "^3.0.3",
         "tailwindcss": "^3",
