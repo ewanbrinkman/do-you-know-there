@@ -42,26 +42,19 @@ const Home: React.FC = () => {
     useDeveloperMessage();
 
     return (
-        <div
-            className="flex-grow relative"
-            style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-            }}
-        >
+        <div className="flex flex-grow relative justify-center items-center">
             <div className="pointer-events-none z-10 absolute flex flex-col items-center space-y-16">
-                <Container className="pointer-events-auto">
+                <Container className="pointer-events-auto mx-16">
                     <h1 className="font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
                         Do You Know {mapInfo ? mapInfo.name : 'There'}?
                     </h1>
                 </Container>
-                <Container className="pointer-events-auto">
+                <Container className="pointer-events-auto mx-16">
                     <p className="text-base md:text-lg">
                         Choose where each picture was taken on the map.
                     </p>
                 </Container>
-                <Button text="Play" href="/play" />
+                <Button href="/play">Play</Button>
             </div>
             <Map
                 mapData={mapData}

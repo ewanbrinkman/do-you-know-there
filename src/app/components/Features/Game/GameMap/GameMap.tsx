@@ -51,6 +51,13 @@ const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
 
                 map.setZoom(props.mapData.zoom.initial);
 
+                // Find the distance between the two guesses locations.
+                props.addLocationResult({
+                    distance: correctMarker
+                        .getLatLng()
+                        .distanceTo(guessMarker.getLatLng()),
+                });
+
                 props.createOrUpdateRemoveGuessMapInfo(() => {
                     guessMarker.remove();
                     correctMarker.remove();

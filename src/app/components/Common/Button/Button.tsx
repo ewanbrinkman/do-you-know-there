@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
             onClick={props.onClick}
             style={props.style}
         >
-            {props.text}
+            {props.children}
         </Link>
     ) : (
         <button
@@ -21,7 +21,7 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
             onClick={props.onClick}
             style={props.style}
         >
-            {props.text}
+            {props.children}
         </button>
     );
 };

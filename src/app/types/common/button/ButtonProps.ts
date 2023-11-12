@@ -1,7 +1,7 @@
 import { CSSProperties } from 'react';
 
 interface ButtonProps {
-    text: string;
+    children?: React.ReactNode;
     href?: string;
     onClick?: () => void;
     className?: string;

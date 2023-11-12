@@ -9,7 +9,7 @@ const AboutPage: React.FC = () => {
 
     return (
         <div className="flex flex-grow flex-col items-center p-8 space-y-8 bg-gradient-to-b from-white to-primary-color">
-            <Container className="w-full sm:max-w-3xl">
+            <Container className="w-full sm:max-w-3xl mx-16">
                 <h1 className="text-3xl font-bold">Info</h1>
                 <p>
                     A game to test how well you know an area. Guess where each
@@ -18,7 +18,7 @@ const AboutPage: React.FC = () => {
                 </p>
                 <p>Made by Ewan Brinkman.</p>
             </Container>
-            <Container className="w-full sm:max-w-3xl">
+            <Container className="w-full sm:max-w-3xl mx-16">
                 <h1 className="text-3xl font-bold">Contribute</h1>
                 <p>
                     Want to add images to an area, or even suggest a new area?
@@ -32,7 +32,7 @@ const AboutPage: React.FC = () => {
                     .
                 </p>
             </Container>
-            <Container className="w-full sm:max-w-3xl">
+            <Container className="w-full sm:max-w-3xl mx-16">
                 <h1 className="text-3xl font-bold">Developers</h1>
                 <p>
                     Source code can be found{' '}

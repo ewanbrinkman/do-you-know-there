@@ -13,12 +13,16 @@ import gameConfig from '@config/game.json';
 import dynamic from 'next/dynamic';
 import Button from '@components/Common/Button';
 import GameContainerProps from '@typings/game/GameContainerProps';
+import Container from '@components/Common/Container';
+import LocationResult from '@typings/game/LocationResult';
 const GameMap = dynamic(() => import('@components/Features/Game/GameMap'), {
     loading: () => null,
     ssr: false,
 });
 
-const GameContainer: React.FC<GameContainerProps> = (props: GameContainerProps) => {
+const GameContainer: React.FC<GameContainerProps> = (
+    props: GameContainerProps,
+) => {
     const [minimized, setMinimized] = useState(false);
     const [guessed, setGuessed] = useState(false);
 
@@ -78,7 +82,8 @@ const GameContainer: React.FC<GameContainerProps> = (props: GameContainerProps) 
             });
     }, [area]);
 
-    // Update location data, when the list of all location data changes, or the location Id changes.
+    // Update location data, when the list of all location data changes, or the
+    // location Id changes.
     useEffect(() => {
         if (areaLocationData === null || locationId === null) {
             setLocationData(null);
@@ -127,15 +132,18 @@ const GameContainer: React.FC<GameContainerProps> = (props: GameContainerProps) 
         <div
             ref={parentContainerRef}
             className="flex flex-grow relative justify-center items-center"
-            style={
-                {
-                    // display: 'flex',
-                    // justifyContent: 'center',
-                    // alignItems: 'center',
-                }
-            }
         >
-            {/* <button className='absolute z-10' style={{bottom: '30px'}}>Next</button> */}
+            {areaLocationData !== null && (
+                <Container className="z-10 absolute top-[30px] right-[30px]">
+                    <p>
+                        Location {locationsGuessedAmount + 1}/
+                        {Math.min(
+                            gameConfig.locationsPerGame,
+                            areaLocationData.length,
+                        )}
+                    </p>
+                </Container>
+            )}
             <GameMap
                 mapData={mapData}
                 className="w-full h-full z-0"
@@ -149,27 +157,49 @@ const GameContainer: React.FC<GameContainerProps> = (props: GameContainerProps) 
                 createOrUpdateRemoveGuessMapInfo={
                     createOrUpdateRemoveGuessMapInfo
                 }
+                addLocationResult={props.addLocationResult}
             />
+            {guessed && (
+                <Container className="z-10 absolute top-[30px]">
+                    <p>Distance: {props.getLatestLocationResult().distance.toFixed(1)}m</p>
+                </Container>
+            )}
             {guessed ? (
-                <Button
-                    text="Next"
-                    className="z-10 absolute bottom-[50px]"
-                    onClick={() => {
-                        setLocationsGuessedAmount((current) => current++);
-                        setGuessed(false);
-                        removeGuessMapInfo.current?.();
-                        setMinimized(false);
+                areaLocationData !== null && (
+                    <Button
+                        className="z-10 absolute bottom-[50px]"
+                        onClick={() => {
+                            setGuessed(false);
+                            removeGuessMapInfo.current?.();
+                            setMinimized(false);
 
-                        // Set location data to null for now, to not have the old location image be displayed. pickLocationId will set the new location data so that the new location image is displayed.
-                        setLocationData(null);
+                            // Set location data to null for now, to not have the
+                            // old location image be displayed. pickLocationId will
+                            // set the new location data so that the new location
+                            // image is displayed.
+                            setLocationData(null);
 
-                        if (locationIdsNotPicked.length > 0) {
-                            pickLocationId([...locationIdsNotPicked]);
-                        } else {
-                            console.log('Game finished');
-                        }
-                    }}
-                />
+                            if (
+                                locationIdsNotPicked.length > 0 &&
+                                locationsGuessedAmount + 1 <
+                                    gameConfig.locationsPerGame
+                            ) {
+                                pickLocationId([...locationIdsNotPicked]);
+                            } else {
+                                props.setGameOver(true);
+                            }
+                            setLocationsGuessedAmount((current) => ++current);
+                        }}
+                    >
+                        {locationsGuessedAmount + 1 <
+                        Math.min(
+                            gameConfig.locationsPerGame,
+                            areaLocationData.length,
+                        )
+                            ? 'Next'
+                            : 'View Results'}
+                    </Button>
+                )
             ) : (
                 <GameLocationImage
                     locationData={locationData}

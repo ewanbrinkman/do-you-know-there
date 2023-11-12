@@ -1,5 +1,5 @@
 import React from 'react';
-import BaseLocationImageProps from '@/app/types/locationImage/BaseLocationImageProps';
+import BaseLocationImageProps from '@typings/locationImage/BaseLocationImageProps';
 
 interface GameLocationImageProps extends BaseLocationImageProps {
     minimized: boolean;
