@@ -13,11 +13,10 @@ const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
         const map = useMapEvents({
             click: (e) => {
                 if (!props.locationData || props.guessed || !props.mapData) {
-                    // Location data hasn't been set yet.
                     return;
                 }
 
-                console.log([e.latlng.lat, e.latlng.lng]);
+                // console.log([e.latlng.lat, e.latlng.lng]);
 
                 props.onGuess();
 
@@ -46,11 +45,11 @@ const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
                 ];
 
                 const markerLine = L.polyline(latlngs, {
-                    color: '#005234',
+                    color: '#1d4ed8',
                     dashArray: '5, 10', // number of pixels drawns, number of pixels skipped
                 }).addTo(map);
 
-                map.setZoom(props.mapData.zoom.initial.baseScreen);
+                map.setZoom(props.mapData.zoom.initial);
 
                 props.createOrUpdateRemoveGuessMapInfo(() => {
                     guessMarker.remove();

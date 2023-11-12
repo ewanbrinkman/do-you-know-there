@@ -1,12 +1,14 @@
 import RawMapData from '@typings/data/RawMapData';
 import MapArea from '@typings/data/MapArea';
-import MapData from '@typings/data/MapData';
+import ProcessedMapData from '@/app/types/data/ProcessedMapData';
 
-export default async function loadMapData(area: MapArea): Promise<MapData> {
+export default async function loadMapData(
+    area: MapArea,
+): Promise<ProcessedMapData> {
     try {
         const module = await import(`@assets/data/areas/${area}/map.json`);
         const rawMapData: RawMapData = module.default;
-        const newMapData: MapData = {
+        const newMapData: ProcessedMapData = {
             ...rawMapData,
             area: area,
         };

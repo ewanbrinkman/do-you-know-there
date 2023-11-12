@@ -11,7 +11,7 @@ const Map: React.FC<MapProps> = (props: MapProps) => {
         <MapContainer
             className={props.className}
             center={[props.mapData.center.lat, props.mapData.center.lng]}
-            zoom={props.mapData.zoom.initial.baseScreen}
+            zoom={props.mapData.zoom.initial}
             zoomControl={
                 props.zoomControl === undefined ? true : props.zoomControl
             }
@@ -26,7 +26,7 @@ const Map: React.FC<MapProps> = (props: MapProps) => {
                     props.mapData.maxBounds.northeast.lng,
                 ],
             ]}
-            minZoom={props.mapData.zoom.min.baseScreen}
+            minZoom={props.mapData.zoom.min}
         >
             <TileLayer
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'

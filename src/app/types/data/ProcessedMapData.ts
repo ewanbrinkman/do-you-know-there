@@ -1,6 +1,6 @@
 import MapArea from '@/app/types/data/MapArea';
 
-interface MapData {
+interface ProcessedMapData {
     area: MapArea;
     center: {
         lat: number;
@@ -17,9 +17,15 @@ interface MapData {
         };
     };
     zoom: {
-        initial: number;
-        min: number;
+        initial: {
+            baseScreen: number;
+            smallScreen: number;
+        };
+        min: {
+            baseScreen: number;
+            smallScreen: number;
+        };
     };
 }
 
-export default MapData;
+export default ProcessedMapData;

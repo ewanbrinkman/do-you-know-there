@@ -23,6 +23,7 @@
             "@app/*": ["./src/app/*"],
             "@components/*": ["./src/app/components/*"],
             "@utils/*": ["./src/app/utils/*"],
+            "@hooks/*": ["./src/app/hooks/*"],
             "@typings/*": ["./src/app/types/*"],
             "@styles/*": ["./src/styles/*"],
             "@assets/*": ["./src/assets/*"],

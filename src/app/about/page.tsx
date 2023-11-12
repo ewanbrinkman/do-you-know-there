@@ -1,8 +1,12 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
 import Container from '@components/Common/Container';
+import useDeveloperMessage from '@hooks/useDeveloperMessage';
 
 const AboutPage: React.FC = () => {
+    useDeveloperMessage();
+
     return (
         <div className="flex flex-grow flex-col items-center p-8 space-y-8 bg-gradient-to-b from-white to-primary-color">
             <Container className="w-full sm:max-w-3xl">

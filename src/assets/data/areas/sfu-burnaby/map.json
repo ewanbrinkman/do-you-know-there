@@ -16,10 +16,10 @@
     "zoom": {
         "initial": {
             "baseScreen": 16,
-            "smallScreen": 16
+            "smallScreen": 15
         },
         "min": {
-            "baseScreen": 16,
+            "baseScreen": 15,
             "smallScreen": 15
         }
     }

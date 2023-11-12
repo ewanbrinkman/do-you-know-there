@@ -2,19 +2,23 @@
 import React, { useState, useRef, useEffect } from 'react';
 import GameLocationImage from '@components/Features/Game/GameLocationImage';
 import MapArea from '@typings/data/MapArea';
-import MapData from '@typings/data/MapData';
+import MapData from '@/app/types/data/MapData';
+import ProcessedMapData from '@/app/types/data/ProcessedMapData';
 import LocationData from '@typings/data/LocationData';
 import RawLocationData from '@typings/data/RawLocationData';
 import loadMapData from '@utils/loaders/loadMapData';
+import convertProcessedMapDataToMapData from '@utils/converters/convertProcessedMapDataToMapData';
+import ScreenSize from '@typings/data/ScreenSize';
 import gameConfig from '@config/game.json';
 import dynamic from 'next/dynamic';
 import Button from '@components/Common/Button';
+import GameContainerProps from '@typings/game/GameContainerProps';
 const GameMap = dynamic(() => import('@components/Features/Game/GameMap'), {
     loading: () => null,
     ssr: false,
 });
 
-const GameContainer: React.FC = () => {
+const GameContainer: React.FC<GameContainerProps> = (props: GameContainerProps) => {
     const [minimized, setMinimized] = useState(false);
     const [guessed, setGuessed] = useState(false);
 
@@ -26,6 +30,8 @@ const GameContainer: React.FC = () => {
     const [locationId, setLocationid] = useState<number | null>(null);
 
     const [mapData, setMapData] = useState<MapData | null>(null);
+    const [processedMapData, setProcessedMapData] =
+        useState<ProcessedMapData | null>(null);
 
     const parentContainerRef = useRef(null);
 
@@ -43,7 +49,12 @@ const GameContainer: React.FC = () => {
 
     // Update map data, when the area changes.
     useEffect(() => {
-        loadMapData(area).then((newMapData: MapData) => {
+        loadMapData(area).then((newProcessedMapData: ProcessedMapData) => {
+            setProcessedMapData(newProcessedMapData);
+            const newMapData: MapData = convertProcessedMapDataToMapData(
+                newProcessedMapData,
+                window.innerWidth < 800 ? ScreenSize.Small : ScreenSize.Base,
+            );
             setMapData(newMapData);
         });
     }, [area]);
@@ -134,10 +145,6 @@ const GameContainer: React.FC = () => {
                     setGuessed(true);
                 }}
                 guessed={guessed}
-                // canGuess={() => {
-                //     // Can only guess if location data has been loaded and have not guessed yet.
-                //     return (locationData ?? false) && !guessed;
-                // }}
                 locationData={locationData}
                 createOrUpdateRemoveGuessMapInfo={
                     createOrUpdateRemoveGuessMapInfo
@@ -152,6 +159,9 @@ const GameContainer: React.FC = () => {
                         setGuessed(false);
                         removeGuessMapInfo.current?.();
                         setMinimized(false);
+
+                        // Set location data to null for now, to not have the old location image be displayed. pickLocationId will set the new location data so that the new location image is displayed.
+                        setLocationData(null);
 
                         if (locationIdsNotPicked.length > 0) {
                             pickLocationId([...locationIdsNotPicked]);

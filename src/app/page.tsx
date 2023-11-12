@@ -1,12 +1,16 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import MapArea from '@typings/data/MapArea';
-import MapData from '@typings/data/MapData';
+import ProcessedMapData from '@/app/types/data/ProcessedMapData';
+import MapData from '@/app/types/data/MapData';
 import MapInfo from '@typings/data/MapInfo';
 import loadMapData from '@utils/loaders/loadMapData';
 import loadMapInfo from '@utils/loaders/loadMapInfo';
 import Container from '@components/Common/Container';
 import Button from '@components/Common/Button';
+import convertProcessedMapDataToMapData from '@utils/converters/convertProcessedMapDataToMapData';
+import ScreenSize from '@typings/data/ScreenSize';
+import useDeveloperMessage from '@hooks/useDeveloperMessage';
 import dynamic from 'next/dynamic';
 const Map = dynamic(() => import('@components/Common/Map'), {
     loading: () => null,
@@ -16,17 +20,26 @@ const Map = dynamic(() => import('@components/Common/Map'), {
 const Home: React.FC = () => {
     const [area, setArea] = useState<MapArea>(MapArea.SFUBurnaby);
     const [mapData, setMapData] = useState<MapData | null>(null);
+    const [processedMapData, setProcessedMapData] =
+        useState<ProcessedMapData | null>(null);
     const [mapInfo, setMapInfo] = useState<MapInfo | null>(null);
 
     // Update map data and info, when the area changes.
     useEffect(() => {
-        loadMapData(area).then((newMapData: MapData) => {
+        loadMapData(area).then((newProcessedMapData: ProcessedMapData) => {
+            setProcessedMapData(newProcessedMapData);
+            const newMapData: MapData = convertProcessedMapDataToMapData(
+                newProcessedMapData,
+                window.innerWidth < 800 ? ScreenSize.Small : ScreenSize.Base,
+            );
             setMapData(newMapData);
         });
         loadMapInfo(area).then((newMapInfo: MapInfo) => {
             setMapInfo(newMapInfo);
         });
     }, [area]);
+
+    useDeveloperMessage();
 
     return (
         <div
