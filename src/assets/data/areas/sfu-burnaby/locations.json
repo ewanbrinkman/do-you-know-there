@@ -109,15 +109,15 @@
     },
     {
         "id": 10,
-        "filename": "stairs-to-long-hall.png",
-        "name": "Stairs To Long Hall",
-        "difficulty": 2,
-        "hint": "Near the AQ.",
+        "filename": "sub-stairs.jpg",
+        "name": "SUB Stairs",
+        "difficulty": 3,
+        "hint": "In the SUB.",
         "coordinates": {
-            "lat": 49.2793510622893,
-            "lng": -122.91533946990968
+            "lat": 49.278633640321075,
+            "lng": -122.91815578937532
         },
-        "keywords": ["light", "stairs", "inside"]
+        "keywords": ["light", "stairs", "inside", "sub"]
     },
     {
         "id": 11,
