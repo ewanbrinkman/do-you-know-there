@@ -20,8 +20,8 @@ const GameLocationImage: React.FC<GameLocationImageProps> = (
                     : 'game-location-image--not-minimized'
             }`}
             style={{
-                maxWidth: '75%',
-                maxHeight: '75%',
+                maxWidth: '70%',
+                maxHeight: '70%',
             }}
         />
     );
