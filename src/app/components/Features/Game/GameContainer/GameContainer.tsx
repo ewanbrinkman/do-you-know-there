@@ -134,15 +134,21 @@ const GameContainer: React.FC<GameContainerProps> = (
             className="flex flex-grow relative justify-center items-center"
         >
             {areaLocationData !== null && (
-                <Container className="z-10 absolute top-[30px] right-[30px]">
-                    <p>
-                        Location {locationsGuessedAmount + 1}/
-                        {Math.min(
-                            gameConfig.locationsPerGame,
-                            areaLocationData.length,
-                        )}
-                    </p>
-                </Container>
+                <div>
+                    <Container className="z-10 absolute top-[30px] right-[30px]">
+                        <p>
+                            Location {locationsGuessedAmount + 1}/
+                            {Math.min(
+                                gameConfig.locationsPerGame,
+                                areaLocationData.length,
+                            )}
+                            {guessed &&
+                                ` - Distance: ${props
+                                    .getLatestLocationResult()
+                                    .distance.toFixed(1)}m`}
+                        </p>
+                    </Container>
+                </div>
             )}
             <GameMap
                 mapData={mapData}
@@ -159,14 +165,6 @@ const GameContainer: React.FC<GameContainerProps> = (
                 }
                 addLocationResult={props.addLocationResult}
             />
-            {guessed && (
-                <Container className="z-10 absolute top-[30px]">
-                    <p>
-                        Distance:{' '}
-                        {props.getLatestLocationResult().distance.toFixed(1)}m
-                    </p>
-                </Container>
-            )}
             {guessed ? (
                 areaLocationData !== null && (
                     <Button
