@@ -20,8 +20,9 @@ const AboutPage: React.FC = () => {
             <Container className="w-full sm:max-w-4xl mx-16">
                 <h1 className="text-3xl font-bold">Contribute</h1>
                 <p>
-                    Want to add images to an area, or even suggest a new area?
-                    Feel free to open an issue{' '}
+                    Want to add images to an area or even suggest a new area?
+                    Want to report a bug or request a feature? Feel free to open
+                    an issue{' '}
                     <Link
                         href="https://github.com/ewanbrinkman/do-you-know-there/issues"
                         className="text-white hover:underline"

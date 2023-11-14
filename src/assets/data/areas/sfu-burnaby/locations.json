@@ -2,7 +2,7 @@
     {
         "id": 1,
         "filename": "intersection-foggy.jpg",
-        "name": "Foggy Intersection ",
+        "name": "Foggy Intersection",
         "difficulty": 4,
         "hint": "Somewhere with water.",
         "coordinates": {
