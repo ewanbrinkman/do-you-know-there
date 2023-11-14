@@ -9,16 +9,15 @@ const AboutPage: React.FC = () => {
 
     return (
         <div className="flex flex-grow flex-col items-center p-8 space-y-8 bg-gradient-to-b from-white to-primary-color">
-            <Container className="w-full sm:max-w-3xl mx-16">
+            <Container className="w-full sm:max-w-4xl mx-16">
                 <h1 className="text-3xl font-bold">Info</h1>
                 <p>
-                    A game to test how well you know an area. Guess where each
-                    image was taken from (not what the picture is focused on,
-                    but where the picture was actually taken).
+                    A game to test how well you know an area. For each image,
+                    guess where the photographer was standing.
                 </p>
                 <p>Made by Ewan Brinkman.</p>
             </Container>
-            <Container className="w-full sm:max-w-3xl mx-16">
+            <Container className="w-full sm:max-w-4xl mx-16">
                 <h1 className="text-3xl font-bold">Contribute</h1>
                 <p>
                     Want to add images to an area, or even suggest a new area?
@@ -32,7 +31,7 @@ const AboutPage: React.FC = () => {
                     .
                 </p>
             </Container>
-            <Container className="w-full sm:max-w-3xl mx-16">
+            <Container className="w-full sm:max-w-4xl mx-16">
                 <h1 className="text-3xl font-bold">Developers</h1>
                 <p>
                     Source code can be found{' '}
