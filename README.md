@@ -220,7 +220,7 @@ Project Link:
 The following images were provided by other people. The name of the image
 provider is given if the person wanted to have their name public.
 
--   [sfu-burnaby](/public/areas/sfu-burnaby/locations/):
+-   For the [sfu-burnaby](/public/areas/sfu-burnaby/locations/) area:
     -   [bridge-snowy.jpg](/public/areas//sfu-burnaby/locations/bridge-snowy.jpg)
     -   [bus-loop-foggy.jpg](/public/areas//sfu-burnaby/locations/bus-loop-foggy.jpg)
     -   [dark-snowy-road.jpg](/public/areas//sfu-burnaby/locations/dark-snowy-road.jpg)
