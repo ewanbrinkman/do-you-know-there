@@ -90,6 +90,8 @@ Instructions for how to set up locally are below.
     npm run dev
     ```
 
+For hosting, update `baseUrl` in [src/app/sitemap.ts](src/app/sitemap.ts).
+
 ## Usage
 
 To see how to set up the game locally on a development server, follow the steps
