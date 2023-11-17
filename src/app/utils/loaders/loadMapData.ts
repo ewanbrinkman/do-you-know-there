@@ -1,6 +1,6 @@
 import RawMapData from '@typings/data/RawMapData';
 import MapArea from '@typings/data/MapArea';
-import ProcessedMapData from '@/app/types/data/ProcessedMapData';
+import ProcessedMapData from '@typings/data/ProcessedMapData';
 
 export default async function loadMapData(
     area: MapArea,

@@ -1,7 +1,7 @@
 [
     {
-        "id": 1,
-        "filename": "intersection-foggy.jpg",
+        "id": "4c047528ca19e9948f31c76f077c365e1125e788",
+        "filename": "4c047528ca19e9948f31c76f077c365e1125e788.jpeg",
         "name": "Foggy Intersection",
         "difficulty": 4,
         "hint": "Somewhere with water.",
@@ -12,20 +12,17 @@
         "keywords": ["fog", "intersection"]
     },
     {
-        "id": 2,
-        "filename": "fish-pond-foggy.jpg",
+        "id": "5c293856f6b7264268e9c1437c9e30a6c78f6c87",
+        "filename": "5c293856f6b7264268e9c1437c9e30a6c78f6c87.jpeg",
         "name": "Foggy Fish Pond",
         "difficulty": 2,
         "hint": "If the sun is in the picture, what direction and hence what side must the picture be taken from.",
-        "coordinates": {
-            "lat": 49.2789346088565,
-            "lng": -122.91710972785951
-        },
+        "coordinates": { "lat": 49.2789346088565, "lng": -122.91710972785951 },
         "keywords": ["fog", "fish-pond", "sun", "water"]
     },
     {
-        "id": 3,
-        "filename": "dark-snowy-road.jpg",
+        "id": "57bc9c5058a29f4200e8d3393b9abcb880bbc7c3",
+        "filename": "57bc9c5058a29f4200e8d3393b9abcb880bbc7c3.jpeg",
         "name": "Dark Snowy Road",
         "difficulty": 3,
         "hint": "Lots of buses go near here.",
@@ -36,8 +33,8 @@
         "keywords": ["snow", "road", "dark"]
     },
     {
-        "id": 4,
-        "filename": "sub-dark.jpg",
+        "id": "af3f6d7f9e057ee5776d621d377ecd80f4a7fc2e",
+        "filename": "af3f6d7f9e057ee5776d621d377ecd80f4a7fc2e.jpeg",
         "name": "Dark SUB",
         "difficulty": 1,
         "hint": "Near the AQ.",
@@ -48,68 +45,53 @@
         "keywords": ["dark", "building", "sub"]
     },
     {
-        "id": 5,
-        "filename": "looking-over-near-aq-pond.jpg",
+        "id": "45763c51aae04cd52d91c7019990422e9bc6214c",
+        "filename": "45763c51aae04cd52d91c7019990422e9bc6214c.jpeg",
         "name": "Looking Over Pond Near AQ",
         "difficulty": 3,
         "hint": "Near the AQ.",
-        "coordinates": {
-            "lat": 49.27956803663402,
-            "lng": -122.91650354862215
-        },
+        "coordinates": { "lat": 49.27956803663402, "lng": -122.91650354862215 },
         "keywords": ["water", "light"]
     },
     {
-        "id": 6,
-        "filename": "bus-loop-foggy.jpg",
+        "id": "010394b2d4a955b7583636f5111e852e31854d8b",
+        "filename": "010394b2d4a955b7583636f5111e852e31854d8b.jpeg",
         "name": "Bus Loop Foggy",
         "difficulty": 1,
         "hint": "Lots of buses are here.",
-        "coordinates": {
-            "lat": 49.27912358816098,
-            "lng": -122.91229248046876
-        },
+        "coordinates": { "lat": 49.27912358816098, "lng": -122.91229248046876 },
         "keywords": ["fog", "bus-loop"]
     },
     {
-        "id": 7,
-        "filename": "rotunda-top-west.jpg",
+        "id": "9adc27aee211f9329cb55372befad87f34d3a6d0",
+        "filename": "9adc27aee211f9329cb55372befad87f34d3a6d0.jpeg",
         "name": "Rotunda Top",
         "difficulty": 1,
         "hint": "Look at the background.",
-        "coordinates": {
-            "lat": 49.27947704750892,
-            "lng": -122.92037129402162
-        },
+        "coordinates": { "lat": 49.27947704750892, "lng": -122.92037129402162 },
         "keywords": ["rotunda", "light"]
     },
     {
-        "id": 8,
-        "filename": "bridge-snowy.jpg",
+        "id": "3bc6566f6bf7b39a3bd2e4221dd79012ba8960d9",
+        "filename": "3bc6566f6bf7b39a3bd2e4221dd79012ba8960d9.jpeg",
         "name": "Snowy Bridge",
         "difficulty": 4,
         "hint": "Near some shops.",
-        "coordinates": {
-            "lat": 49.27829117270483,
-            "lng": -122.9115498844786
-        },
+        "coordinates": { "lat": 49.27829117270483, "lng": -122.9115498844786 },
         "keywords": ["snow", "bridge"]
     },
     {
-        "id": 9,
-        "filename": "near-aq-pond-snowy.jpg",
+        "id": "945e1d76dd89d9f7095e55ceb85efc6741f389f1.jpeg",
+        "filename": "945e1d76dd89d9f7095e55ceb85efc6741f389f1.jpeg",
         "name": "Snowy Pond Near AQ",
         "difficulty": 3,
         "hint": "Near the AQ.",
-        "coordinates": {
-            "lat": 49.27964852687399,
-            "lng": -122.91641771793367
-        },
+        "coordinates": { "lat": 49.27964852687399, "lng": -122.91641771793367 },
         "keywords": ["water", "ice", "light", "snow"]
     },
     {
-        "id": 10,
-        "filename": "sub-stairs.jpg",
+        "id": "00eb78fcfb4d2ea6c0d4ab49f945a88333fe1574",
+        "filename": "00eb78fcfb4d2ea6c0d4ab49f945a88333fe1574.jpeg",
         "name": "SUB Stairs",
         "difficulty": 3,
         "hint": "In the SUB.",
@@ -120,8 +102,8 @@
         "keywords": ["light", "stairs", "inside", "sub"]
     },
     {
-        "id": 11,
-        "filename": "rooftop-parking.jpg",
+        "id": "21c41324f2d576ed82ac10d154acdd29302eb16f",
+        "filename": "21c41324f2d576ed82ac10d154acdd29302eb16f",
         "name": "Rooftop Parking",
         "difficulty": 2,
         "hint": "Around WMC.",
@@ -132,8 +114,8 @@
         "keywords": ["light", "outside", "parking", "roof"]
     },
     {
-        "id": 12,
-        "filename": "library-view-from-rooftop-foggy.jpg",
+        "id": "0c8f7c924cd121c28b76d6e7b089180a0c5066e8",
+        "filename": "0c8f7c924cd121c28b76d6e7b089180a0c5066e8.jpeg",
         "name": "Foggy Library View From Rooftop",
         "difficulty": 1,
         "hint": "Facing west.",
@@ -142,5 +124,188 @@
             "lng": -122.91722238063812
         },
         "keywords": ["light", "outside", "fog", "roof", "library"]
+    },
+    {
+        "id": "03988cbf87430a3da28f4d743febaf718450a868",
+        "filename": "03988cbf87430a3da28f4d743febaf718450a868.jpeg",
+        "name": "Bus Loop East View",
+        "difficulty": 1,
+        "hint": "Lots of buses around here.",
+        "coordinates": { "lat": 49.278381665251, "lng": -122.91285574436189 },
+        "keywords": ["bus-loop", "light", "outside", "road"]
+    },
+    {
+        "id": "eb10d61af8e06a33d88af08effaecee5b3958422",
+        "filename": "eb10d61af8e06a33d88af08effaecee5b3958422.jpeg",
+        "name": "South-West AQ",
+        "difficulty": 2,
+        "hint": "Near the SUB.",
+        "coordinates": { "lat": 49.27859864386054, "lng": -122.91754424571992 },
+        "keywords": ["inside", "light", "aq", "building"]
+    },
+    {
+        "id": "a4fe5cd09cabe48de35d3c6736dd65857852a110",
+        "filename": "a4fe5cd09cabe48de35d3c6736dd65857852a110.jpeg",
+        "name": "Periodic Table",
+        "difficulty": 3,
+        "hint": "In one of the science buildings.",
+        "coordinates": { "lat": 49.27797570270808, "lng": -122.91764616966249 },
+        "keywords": ["inside", "light", "science"]
+    },
+    {
+        "id": "213a53990b357bf83e88211d159d8badde0a5699",
+        "filename": "213a53990b357bf83e88211d159d8badde0a5699.jpeg",
+        "name": "Blue Bar Pyramid",
+        "difficulty": 4,
+        "hint": "It was moved from its previous position.",
+        "coordinates": {
+            "lat": 49.278056195546846,
+            "lng": -122.91803240776063
+        },
+        "keywords": ["outside", "light", "sculpture"]
+    },
+    {
+        "id": "82999779909ffcce35cfa67ee0355c8ac75886ff",
+        "filename": "82999779909ffcce35cfa67ee0355c8ac75886ff.jpeg",
+        "name": "Back of the SUB",
+        "difficulty": 2,
+        "hint": "Around the SUB.",
+        "coordinates": { "lat": 49.27818568375093, "lng": -122.91800022125246 },
+        "keywords": ["sub", "outside", "light", "stairs"]
+    },
+    {
+        "id": "aecdae2407a09da213ff7375b84429f8757853c1",
+        "filename": "aecdae2407a09da213ff7375b84429f8757853c1.jpeg",
+        "name": "South-West AQ Stairs",
+        "difficulty": 3,
+        "hint": "In the AQ.",
+        "coordinates": { "lat": 49.27869313424697, "lng": -122.91746377944948 },
+        "keywords": ["stairs", "inside", "building", "aq", "light"]
+    },
+    {
+        "id": "85b441fa4446be088f31fa27eba38921903ab971",
+        "filename": "85b441fa4446be088f31fa27eba38921903ab971.jpeg",
+        "name": "South-West AQ Entrance",
+        "difficulty": 2,
+        "hint": "Near an entrance to the AQ.",
+        "coordinates": { "lat": 49.27876312700912, "lng": -122.91744768619539 },
+        "keywords": ["inside", "building", "aq", "light"]
+    },
+    {
+        "id": "58f17ce4480d86a9c4f8402e23c56e74507e75ad",
+        "filename": "58f17ce4480d86a9c4f8402e23c56e74507e75ad.jpeg",
+        "name": "Orange Sculpture",
+        "difficulty": 2,
+        "hint": "Around WMC.",
+        "coordinates": {
+            "lat": 49.279820005642854,
+            "lng": -122.92274773120882
+        },
+        "keywords": ["outside", "dark", "sculpture"]
+    },
+    {
+        "id": "680a6f7688ff6e5dc22143f9507c558d2c5f969f",
+        "filename": "680a6f7688ff6e5dc22143f9507c558d2c5f969f.jpeg",
+        "name": "Green Room Under the AQ Stairs",
+        "difficulty": 2,
+        "hint": "Around the AQ.",
+        "coordinates": { "lat": 49.27915858424903, "lng": -122.91756033897401 },
+        "keywords": ["green-room", "aq", "inside", "light"]
+    },
+    {
+        "id": "c39772d8c9312611749310bd294056f0c64919dd",
+        "filename": "c39772d8c9312611749310bd294056f0c64919dd.jpeg",
+        "name": "Back of the SUB Sky View",
+        "difficulty": 2,
+        "hint": "The building has lots of glass.",
+        "coordinates": {
+            "lat": 49.278056195546846,
+            "lng": -122.91803240776063
+        },
+        "keywords": ["outside", "light", "sub"]
+    },
+    {
+        "id": "edfb76cc4a6e18652df2ec3c136f84c4dde04af3",
+        "filename": "edfb76cc4a6e18652df2ec3c136f84c4dde04af3.jpeg",
+        "name": "Hanging Balls",
+        "difficulty": 4,
+        "hint": "In a science area.",
+        "coordinates": { "lat": 49.27797220301647, "lng": -122.91771054267885 },
+        "keywords": ["light", "inside", "building"]
+    },
+    {
+        "id": "2f6186e2c3bef28830b14e740d59903870cf18ec",
+        "filename": "2f6186e2c3bef28830b14e740d59903870cf18ec.jpeg",
+        "name": "Rock Display",
+        "difficulty": 5,
+        "hint": "In a science wing.",
+        "coordinates": { "lat": 49.27812268953193, "lng": -122.9177212715149 },
+        "keywords": ["inside", "display", "light", "science"]
+    },
+    {
+        "id": "f880e838cf712109d6c5a89a3d2fea9f20a6f31b",
+        "filename": "f880e838cf712109d6c5a89a3d2fea9f20a6f31b.jpeg",
+        "name": "Rock Display",
+        "difficulty": 5,
+        "hint": "In a science wing.",
+        "coordinates": { "lat": 49.27754523877539, "lng": -122.90822625160219 },
+        "keywords": ["inside", "display", "light", "science"]
+    },
+    {
+        "id": "3fedd25a6a1e10ada88ac3adbfcd360a9373ddf8",
+        "filename": "3fedd25a6a1e10ada88ac3adbfcd360a9373ddf8.jpeg",
+        "name": "C-9002 and C-9000 Doors",
+        "difficulty": 4,
+        "hint": "Near the AQ.",
+        "coordinates": { "lat": 49.27831517161506, "lng": -122.91761934757234 },
+        "keywords": ["room", "inside", "light", "door"]
+    },
+    {
+        "id": "4cf02139d9d25b0abf9b1539d82d8e87ceb3e824",
+        "filename": "4cf02139d9d25b0abf9b1539d82d8e87ceb3e824.jpeg",
+        "name": "South Side of Green AQ Room",
+        "difficulty": 2,
+        "hint": "Around the AQ.",
+        "coordinates": { "lat": 49.27898710318038, "lng": -122.91762471199037 },
+        "keywords": ["inside", "light", "aq", "green-room"]
+    },
+    {
+        "id": "2e4d1691540be3fcd6d0cddc3ccf9a74cbd4978b",
+        "filename": "2e4d1691540be3fcd6d0cddc3ccf9a74cbd4978b.jpeg",
+        "name": "North Mountain View from the AQ",
+        "difficulty": 3,
+        "hint": "North view from around the middle of SFU. ",
+        "coordinates": { "lat": 49.27964852687399, "lng": -122.91704535484314 },
+        "keywords": ["outside", "light", "view", "mountains"]
+    },
+    {
+        "id": "385f7ff380ded6a643f8815bb39a222d30b4f39d",
+        "filename": "385f7ff380ded6a643f8815bb39a222d30b4f39d.jpeg",
+        "name": "South AQ View near the SUB",
+        "difficulty": 2,
+        "hint": "The glass bridge connects to the SUB.",
+        "coordinates": { "lat": 49.2788716155941, "lng": -122.91783928871156 },
+        "keywords": ["outside", "light", "aq"]
+    },
+    {
+        "id": "4ece99ea4ade30626f62f4f7b1ac583b84f6ec8c",
+        "filename": "4ece99ea4ade30626f62f4f7b1ac583b84f6ec8c.jpeg",
+        "name": "Science Road South View",
+        "difficulty": 3,
+        "hint": "Near parking lots.",
+        "coordinates": { "lat": 49.27724426176144, "lng": -122.91302204132081 },
+        "keywords": ["road", "outside", "dark"]
+    },
+    {
+        "id": "ad0f1b4c85ba808ca8e40154ae74887a7f421a6e",
+        "filename": "ad0f1b4c85ba808ca8e40154ae74887a7f421a6e.jpeg",
+        "name": "AQ Fish Pond",
+        "difficulty": 1,
+        "hint": "In the AQ.",
+        "coordinates": {
+            "lat": 49.279055345717914,
+            "lng": -122.91723847389223
+        },
+        "keywords": ["fish-pond", "outside", "dark", "aq"]
     }
 ]

@@ -2,7 +2,7 @@ import MapArea from '@/app/types/data/MapArea';
 
 interface LocationData {
     area: MapArea;
-    id: number;
+    id: string;
     filename: string;
     name: string;
     difficulty: number;

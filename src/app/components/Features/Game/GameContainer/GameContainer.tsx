@@ -2,8 +2,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import GameLocationImage from '@components/Features/Game/GameLocationImage';
 import MapArea from '@typings/data/MapArea';
-import MapData from '@/app/types/data/MapData';
-import ProcessedMapData from '@/app/types/data/ProcessedMapData';
+import MapData from '@typings/data/MapData';
+import ProcessedMapData from '@typings/data/ProcessedMapData';
 import LocationData from '@typings/data/LocationData';
 import RawLocationData from '@typings/data/RawLocationData';
 import loadMapData from '@utils/loaders/loadMapData';
@@ -31,7 +31,7 @@ const GameContainer: React.FC<GameContainerProps> = (
     >(null);
     const [locationData, setLocationData] = useState<LocationData | null>(null);
     const [area, setArea] = useState<MapArea>(MapArea.SFUBurnaby);
-    const [locationId, setLocationid] = useState<number | null>(null);
+    const [locationId, setLocationid] = useState<string | null>(null);
 
     const [mapData, setMapData] = useState<MapData | null>(null);
     const [processedMapData, setProcessedMapData] =
@@ -47,7 +47,7 @@ const GameContainer: React.FC<GameContainerProps> = (
     };
 
     const [locationsGuessedAmount, setLocationsGuessedAmount] = useState(0);
-    const [locationIdsNotPicked, setLocationIdsNotPicked] = useState<number[]>(
+    const [locationIdsNotPicked, setLocationIdsNotPicked] = useState<string[]>(
         [],
     );
 
@@ -102,7 +102,7 @@ const GameContainer: React.FC<GameContainerProps> = (
         setLocationData(newLocationData);
     }, [areaLocationData, locationId, area]);
 
-    const pickLocationId = (locationIds: number[]) => {
+    const pickLocationId = (locationIds: string[]) => {
         // Choose a new location Id that hasn't been picked yet.
         const chosenIndex = Math.floor(Math.random() * locationIds.length);
         const newLocationId = locationIds[chosenIndex];
