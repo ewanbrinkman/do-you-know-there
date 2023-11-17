@@ -1,5 +1,5 @@
 interface RawLocationData {
-    id: number;
+    id: string;
     filename: string;
     name: string;
     difficulty: number;
