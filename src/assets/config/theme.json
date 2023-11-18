@@ -1,0 +1,17 @@
+{
+    "color": {
+        "primary": {
+            "base": "#baffe6",
+            "light": "#edfff8"
+        },
+        "secondary": {
+            "base": "#005234",
+            "light": "#00b371",
+            "dark": "#003622"
+        },
+        "tertiary": {
+            "base": "#3b82f6",
+            "dark": "#1d4ed8"
+        }
+    }
+}

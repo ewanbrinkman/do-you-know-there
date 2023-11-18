@@ -1,4 +1,4 @@
-import MapData from '@/app/types/data/MapData';
+import MapData from '@typings/data/MapData';
 
 interface BaseMapProps {
     mapData: MapData | null;

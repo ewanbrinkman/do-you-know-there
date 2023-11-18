@@ -1,5 +1,5 @@
-import MapData from '@/app/types/data/MapData';
-import ProcessedMapData from '@/app/types/data/ProcessedMapData';
+import MapData from '@typings/data/MapData';
+import ProcessedMapData from '@typings/data/ProcessedMapData';
 import ScreenSize from '@typings/data/ScreenSize';
 
 export default function convertProcessedMapDataToMapData(

@@ -1,4 +1,4 @@
-import BaseMapProps from '@/app/types/map/BaseMapProps';
+import BaseMapProps from '@typings/map/BaseMapProps';
 
 interface MapProps extends BaseMapProps {
     clickHandler?: React.FC;

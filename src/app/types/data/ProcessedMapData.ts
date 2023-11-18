@@ -1,4 +1,4 @@
-import MapArea from '@/app/types/data/MapArea';
+import MapArea from '@typings/data/MapArea';
 
 interface ProcessedMapData {
     area: MapArea;
