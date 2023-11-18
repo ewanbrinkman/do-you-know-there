@@ -54,6 +54,7 @@ const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
                     distance: correctMarker
                         .getLatLng()
                         .distanceTo(guessMarker.getLatLng()),
+                    locationData: props.locationData,
                 });
 
                 props.createOrUpdateRemoveGuessMapInfo(() => {

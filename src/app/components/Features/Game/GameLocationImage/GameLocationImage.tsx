@@ -14,15 +14,11 @@ const GameLocationImage: React.FC<GameLocationImageProps> = (
         <LocationImage
             locationData={props.locationData}
             onClick={toggleMinimized}
-            className={`absolute z-10 game-location-image ${
+            className={`absolute z-10 max-w-[70%] max-h-[70%] game-location-image ${
                 props.minimized
                     ? 'game-location-image--minimized'
                     : 'game-location-image--not-minimized'
             }`}
-            style={{
-                maxWidth: '70%',
-                maxHeight: '70%',
-            }}
         />
     );
 };
