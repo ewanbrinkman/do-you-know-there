@@ -27,7 +27,7 @@ const ResultsContainer: React.FC<ResultsContainerProps> = (
     return (
         <div className="flex flex-grow flex-col items-center p-8 space-y-8 bg-gradient-to-b from-white to-primary-color">
             <Container className="w-full sm:max-w-2xl mx-16">
-                <h1 className="text-3xl font-bold">Results - Summary</h1>
+                <h1 className="text-3xl font-bold">Results</h1>
                 <p>
                     Total distance (lower is better): {totalDistance.toFixed(1)}
                     m<br />
@@ -45,24 +45,22 @@ const ResultsContainer: React.FC<ResultsContainerProps> = (
                 </p>
             </Container>
             <Container className="w-full sm:max-w-2xl mx-16">
-                <h1 className="text-3xl font-bold">Results - Locations</h1>
                 <div className="flex flex-col items-center space-y-12">
                     {props.locationResults.map((locationResult, index) => (
                         <div
                             className="flex flex-col items-center space-y-2 max-w-[70%]"
                             key={index}
                         >
+                            <h2 className="text-2xl font-bold">
+                                {locationResult.locationData.name}
+                            </h2>
                             <p>
-                                {locationResult.locationData.name} -{' '}
                                 {locationResult.distance.toFixed(1)}m<br />
                                 Personal best: {'(coming soon!)'}
                             </p>
                             <LocationImage
                                 locationData={locationResult.locationData}
                                 className="max-h-[300px]"
-                                // style={{
-                                //     maxHeight: 'auto',
-                                // }}
                             />
                         </div>
                     ))}
