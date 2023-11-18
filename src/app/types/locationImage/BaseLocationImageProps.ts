@@ -1,4 +1,4 @@
-import LocationData from '@/app/types/data/LocationData';
+import LocationData from '@typings/data/LocationData';
 
 interface BaseLocationImageProps {
     locationData: LocationData | null;

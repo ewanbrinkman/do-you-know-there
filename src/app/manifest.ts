@@ -1,14 +1,16 @@
 import { MetadataRoute } from 'next';
+import metadataConfig from '@config/metadata.json';
+import themeConfig from '@config/theme.json';
 
 export default function manifest(): MetadataRoute.Manifest {
     return {
-        name: 'Do You Know There?',
-        short_name: 'DYKT',
-        description: 'A game to test your knowledge of an area.',
+        name: metadataConfig.title.base,
+        short_name: metadataConfig.title.short,
+        description: metadataConfig.description,
         start_url: '/',
         display: 'standalone',
-        background_color: '#005234',
-        theme_color: '#005234',
+        background_color: themeConfig.color.secondary.base,
+        theme_color: themeConfig.color.secondary.base,
         icons: [
             {
                 src: '/favicon.ico',

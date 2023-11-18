@@ -1,6 +1,6 @@
-import BaseMapProps from '@/app/types/map/BaseMapProps';
-import BaseLocationImageProps from '@/app/types/locationImage/BaseLocationImageProps';
-import LocationData from '@/app/types/data/LocationData';
+import BaseMapProps from '@typings/map/BaseMapProps';
+import BaseLocationImageProps from '@typings/locationImage/BaseLocationImageProps';
+import LocationData from '@typings/data/LocationData';
 import LocationResult from '@typings/game/LocationResult';
 
 interface GameMapProps extends BaseMapProps, BaseLocationImageProps {

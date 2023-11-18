@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import '@styles/globals.css';
-import Navbar from '@/app/components/Layouts/Navbar';
+import Navbar from '@components/Layouts/Navbar';
+import metadataConfig from '@config/metadata.json';
 
 export const metadata: Metadata = {
-    title: 'Do You Know There?',
-    description: 'A game to test your knowledge of an area.',
+    title: metadataConfig.title.base,
+    description: metadataConfig.description,
 };
 
 export default function RootLayout({

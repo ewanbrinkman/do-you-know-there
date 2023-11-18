@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import themeConfig from './src/assets/config/theme.json';
 
 const config: Config = {
     content: [
@@ -9,13 +10,13 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                'primary-color': '#baffe6',
-                'primary-color-light': '#edfff8',
-                'secondary-color-light': '#00b371',
-                'secondary-color': '#005234',
-                'secondary-color-dark': '#003622',
-                'tertiary-color': '#3b82f6',
-                'tertiary-color-dark': '#1d4ed8',
+                'primary-color': themeConfig.color.primary.base,
+                'primary-color-light': themeConfig.color.primary.light,
+                'secondary-color-light': themeConfig.color.secondary.light,
+                'secondary-color': themeConfig.color.secondary.base,
+                'secondary-color-dark': themeConfig.color.secondary.dark,
+                'tertiary-color': themeConfig.color.tertiary.base,
+                'tertiary-color-dark': themeConfig.color.tertiary.dark,
             },
             height: {
                 dscreen: '100dvh', // Use 100dvh insteda of 100vh, so that it works on mobile.

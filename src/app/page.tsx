@@ -1,8 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import MapArea from '@typings/data/MapArea';
-import ProcessedMapData from '@/app/types/data/ProcessedMapData';
-import MapData from '@/app/types/data/MapData';
+import ProcessedMapData from '@typings/data/ProcessedMapData';
+import MapData from '@typings/data/MapData';
 import MapInfo from '@typings/data/MapInfo';
 import loadMapData from '@utils/loaders/loadMapData';
 import loadMapInfo from '@utils/loaders/loadMapInfo';
