@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 const baseUrl =
     process.env.NODE_ENV === 'production'
         ? 'https://doyouknowthere.com'
-        : 'http://localhost:3000';
+        : `http://localhost:${process.env.PORT || 3000}`;
 
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
