@@ -84,29 +84,41 @@ const ResultsContainer: React.FC<ResultsContainerProps> = (
         );
 
         setPersonalBests(gameResultsPersonalBests);
-    }, []);
+    }, [
+        props.locationResults,
+        totalDistance,
+        closestLocationGuess.distance,
+        furthestLocationGuess.distance,
+    ]);
 
     return (
         <div className="flex flex-grow flex-col items-center p-8 space-y-8 bg-gradient-to-b from-white to-primary-color">
             <Container className="w-full sm:max-w-2xl mx-16">
                 <h1 className="text-3xl font-bold">Results</h1>
+                <p className="italic">Lower distances are better.</p>
                 <p>
-                    Total distance (lower is better): {totalDistance.toFixed(1)}
+                    Total distance: {totalDistance.toFixed(1)}
                     m<br />
                     {personalBests &&
-                        `Personal best: ${personalBests.summary.total.toFixed(1)}m`}
+                        `Personal best: ${personalBests.summary.total.toFixed(
+                            1,
+                        )}m`}
                 </p>
                 <p>
                     Closest guess: {closestLocationGuess.distance.toFixed(1)}m
                     <br />
                     {personalBests &&
-                        `Personal best: ${personalBests.summary.closest.toFixed(1)}m`}
+                        `Personal best: ${personalBests.summary.closest.toFixed(
+                            1,
+                        )}m`}
                 </p>
                 <p>
                     Furthest guess: {furthestLocationGuess.distance.toFixed(1)}m
                     <br />
                     {personalBests &&
-                        `Personal best: ${personalBests.summary.furthest.toFixed(1)}m`}
+                        `Personal best: ${personalBests.summary.furthest.toFixed(
+                            1,
+                        )}m`}
                 </p>
             </Container>
             <Container className="w-full sm:max-w-2xl mx-16">
@@ -122,11 +134,9 @@ const ResultsContainer: React.FC<ResultsContainerProps> = (
                             <p>
                                 {locationResult.distance.toFixed(1)}m<br />
                                 {personalBests &&
-                                    `Personal best: ${
-                                        personalBests.locations[
-                                            locationResult.locationData.id
-                                        ].toFixed(1)
-                                    }m`}
+                                    `Personal best: ${personalBests.locations[
+                                        locationResult.locationData.id
+                                    ].toFixed(1)}m`}
                             </p>
                             <LocationImage
                                 locationData={locationResult.locationData}

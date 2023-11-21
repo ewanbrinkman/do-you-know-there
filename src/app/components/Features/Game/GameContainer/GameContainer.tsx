@@ -10,21 +10,19 @@ import loadMapData from '@utils/loaders/loadMapData';
 import convertProcessedMapDataToMapData from '@utils/converters/convertProcessedMapDataToMapData';
 import ScreenSize from '@typings/data/ScreenSize';
 import gameConfig from '@config/game.json';
-import dynamic from 'next/dynamic';
 import Button from '@components/Common/Button';
 import GameContainerProps from '@typings/game/GameContainerProps';
 import Container from '@components/Common/Container';
-import LocationResult from '@typings/game/LocationResult';
-const GameMap = dynamic(() => import('@components/Features/Game/GameMap'), {
-    loading: () => null,
-    ssr: false,
-});
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+import GameMap from '@components/Features/Game/GameMap';
 
 const GameContainer: React.FC<GameContainerProps> = (
     props: GameContainerProps,
 ) => {
     const [minimized, setMinimized] = useState(false);
     const [guessed, setGuessed] = useState(false);
+    const [unsubmittedGuess, setUnsubmittedGuess] = useState(false);
 
     const [areaLocationData, setAreaLocationData] = useState<
         LocationData[] | null
@@ -40,16 +38,16 @@ const GameContainer: React.FC<GameContainerProps> = (
     const parentContainerRef = useRef(null);
 
     const removeGuessMapInfo = useRef<(() => void) | null>(null);
-    const createOrUpdateRemoveGuessMapInfo = (
-        newRemoveGuessMapInfo: () => void,
-    ) => {
-        removeGuessMapInfo.current = newRemoveGuessMapInfo;
-    };
 
     const [locationsGuessedAmount, setLocationsGuessedAmount] = useState(0);
     const [locationIdsNotPicked, setLocationIdsNotPicked] = useState<string[]>(
         [],
     );
+
+    const [guessMarkerCoordinates, setGuessMarkerCoordinates] =
+        useState<L.LatLngExpression | null>(null);
+
+    const mapRef = useRef<L.Map | null>(null);
 
     // Update map data, when the area changes.
     useEffect(() => {
@@ -151,25 +149,59 @@ const GameContainer: React.FC<GameContainerProps> = (
                 </div>
             )}
             <GameMap
+                mapRef={mapRef}
                 mapData={mapData}
                 className="w-full h-full z-0"
                 minimized={minimized}
                 setMinimized={setMinimized}
-                onGuess={() => {
-                    setGuessed(true);
+                onPlaceMarker={() => {
+                    setUnsubmittedGuess(true);
                 }}
                 guessed={guessed}
                 locationData={locationData}
-                createOrUpdateRemoveGuessMapInfo={
-                    createOrUpdateRemoveGuessMapInfo
-                }
-                addLocationResult={props.addLocationResult}
+                guessMarkerCoordinates={guessMarkerCoordinates}
+                setGuessMarkerCoordinates={setGuessMarkerCoordinates}
             />
-            {guessed ? (
-                areaLocationData !== null && (
+            {unsubmittedGuess &&
+                mapData &&
+                guessMarkerCoordinates &&
+                locationData && (
                     <Button
                         className="z-10 absolute bottom-[50px]"
                         onClick={() => {
+                            if (mapRef.current === null) {
+                                return;
+                            }
+
+                            mapRef.current.setZoom(mapData.zoom.initial);
+
+                            // Find the distance between the two guesses locations.
+                            props.addLocationResult({
+                                distance: new L.LatLng(
+                                    locationData.coordinates.lat,
+                                    locationData.coordinates.lng,
+                                ).distanceTo(guessMarkerCoordinates),
+                                locationData: locationData,
+                            });
+                            setUnsubmittedGuess(false);
+                            setGuessed(true);
+                        }}
+                    >
+                        Submit
+                    </Button>
+                )}
+            {guessed ? (
+                areaLocationData &&
+                mapData && (
+                    <Button
+                        className="z-10 absolute bottom-[50px]"
+                        onClick={() => {
+                            if (mapRef.current === null) {
+                                return;
+                            }
+
+                            mapRef.current.setZoom(mapData.zoom.initial);
+                            setGuessMarkerCoordinates(null);
                             setGuessed(false);
                             removeGuessMapInfo.current?.();
                             setMinimized(false);

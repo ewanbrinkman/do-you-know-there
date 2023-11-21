@@ -1,67 +1,27 @@
-import 'leaflet/dist/leaflet.css';
-import React from 'react';
-import L from 'leaflet';
-import { useMapEvents } from 'react-leaflet';
+'use client';
+import React, { useRef } from 'react';
+import { useMapEvents, Marker, Polyline, Popup } from 'react-leaflet';
 import icon from '@icons/icon';
 import type MapProps from '@typings/map/MapProps';
 import type GameMapProps from '@typings/map/GameMapProps';
 import Map from '@components/Common/Map';
+import LocationImage from '@components/Common/LocationImage';
+import themeConfig from '@config/theme.json';
 import './GameMap.css';
 
 const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
+    const correctMarkerRef = useRef<L.Marker | null>(null);
+
     const MapClickHandler: React.FC = () => {
-        const map = useMapEvents({
+        useMapEvents({
             click: (e) => {
                 if (!props.locationData || props.guessed || !props.mapData) {
                     return;
                 }
 
-                props.onGuess();
+                props.onPlaceMarker();
 
-                // Display the location guessed by the player.
-                const guessMarker = L.marker([e.latlng.lat, e.latlng.lng], {
-                    icon,
-                }).addTo(map);
-
-                // Display the correct location.
-                const correctMarker = L.marker(
-                    [
-                        props.locationData.coordinates.lat,
-                        props.locationData.coordinates.lng,
-                    ],
-                    { icon },
-                ).addTo(map);
-
-                // Create the popup showing the correct location.
-                const locationDataPopup = `<img src="/areas/${props.locationData.area}/locations/${props.locationData.filename}" alt="${props.locationData.name}" style="border-radius:10%;">`;
-                const correctPopup = L.popup({}).setContent(locationDataPopup);
-                correctMarker.bindPopup(correctPopup).openPopup();
-
-                const latlngs = [
-                    guessMarker.getLatLng(),
-                    correctMarker.getLatLng(),
-                ];
-
-                const markerLine = L.polyline(latlngs, {
-                    color: '#1d4ed8',
-                    dashArray: '5, 10', // number of pixels drawns, number of pixels skipped
-                }).addTo(map);
-
-                map.setZoom(props.mapData.zoom.initial);
-
-                // Find the distance between the two guesses locations.
-                props.addLocationResult({
-                    distance: correctMarker
-                        .getLatLng()
-                        .distanceTo(guessMarker.getLatLng()),
-                    locationData: props.locationData,
-                });
-
-                props.createOrUpdateRemoveGuessMapInfo(() => {
-                    guessMarker.remove();
-                    correctMarker.remove();
-                    markerLine.remove();
-                });
+                props.setGuessMarkerCoordinates([e.latlng.lat, e.latlng.lng]);
             },
         });
 
@@ -69,6 +29,7 @@ const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
     };
 
     const mapProps: MapProps = {
+        mapRef: props.mapRef,
         mapData: props.mapData,
         className: props.className,
         clickHandler: MapClickHandler,
@@ -86,7 +47,54 @@ const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
                 props.setMinimized(true);
             }}
         >
-            <Map {...mapProps} />
+            <Map {...mapProps}>
+                {props.guessMarkerCoordinates && (
+                    // Guess marker.
+                    <Marker
+                        position={props.guessMarkerCoordinates}
+                        icon={icon}
+                    />
+                )}
+                {props.guessed && props.locationData && (
+                    // Correct marker.
+                    <Marker
+                        ref={correctMarkerRef}
+                        position={[
+                            props.locationData.coordinates.lat,
+                            props.locationData.coordinates.lng,
+                        ]}
+                        icon={icon}
+                        eventHandlers={{
+                            add: () => {
+                                correctMarkerRef.current &&
+                                    correctMarkerRef.current.openPopup();
+                            },
+                        }}
+                    >
+                        <Popup minWidth={100}>
+                            <LocationImage
+                                locationData={props.locationData}
+                                className="rounded-md"
+                            />
+                        </Popup>
+                    </Marker>
+                )}
+                {props.guessed &&
+                    props.locationData &&
+                    props.guessMarkerCoordinates && (
+                        <Polyline
+                            positions={[
+                                props.guessMarkerCoordinates,
+                                [
+                                    props.locationData.coordinates.lat,
+                                    props.locationData.coordinates.lng,
+                                ],
+                            ]}
+                            color={themeConfig.color.map.line}
+                            dashArray={[5, 10]} // number of pixels drawns, number of pixels skipped
+                        />
+                    )}
+            </Map>
         </div>
     );
 };
