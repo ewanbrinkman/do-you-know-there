@@ -245,11 +245,11 @@
     {
         "id": "f880e838cf712109d6c5a89a3d2fea9f20a6f31b",
         "filename": "f880e838cf712109d6c5a89a3d2fea9f20a6f31b.jpeg",
-        "name": "Rock Display",
+        "name": "Foggy Path",
         "difficulty": 5,
-        "hint": "In a science wing.",
+        "hint": "East side of SFU.",
         "coordinates": { "lat": 49.27754523877539, "lng": -122.90822625160219 },
-        "keywords": ["inside", "display", "light", "science"]
+        "keywords": ["outside", "light", "fog", "path"]
     },
     {
         "id": "3fedd25a6a1e10ada88ac3adbfcd360a9373ddf8",
@@ -307,5 +307,131 @@
             "lng": -122.91723847389223
         },
         "keywords": ["fish-pond", "outside", "dark", "aq"]
+    },
+    {
+        "id": "27f53cefc0c52c248ce29e8b849f045324af6ce4",
+        "filename": "27f53cefc0c52c248ce29e8b849f045324af6ce4.jpeg",
+        "name": "Rolling Green Hills",
+        "difficulty": 3,
+        "hint": "Near the SUB.",
+        "coordinates": { "lat": 49.2781891834274, "lng": -122.9188907146454 },
+        "keywords": ["outside", "light", "building"]
+    },
+    {
+        "id": "a6e559ee7170bfa00d40462a0bc94972f0f7504b",
+        "filename": "a6e559ee7170bfa00d40462a0bc94972f0f7504b.jpeg",
+        "name": "Circular Couches",
+        "difficulty": 2,
+        "hint": "In the AQ.",
+        "coordinates": { "lat": 49.27859864386054, "lng": -122.91750133037569 },
+        "keywords": ["inside", "light", "aq"]
+    },
+    {
+        "id": "aad78b0aae687e7e4d27600f21c4f4812a4e3a92",
+        "filename": "aad78b0aae687e7e4d27600f21c4f4812a4e3a92.jpeg",
+        "name": "SFU Gallery",
+        "difficulty": 3,
+        "hint": "Looking north.",
+        "coordinates": {
+            "lat": 49.278341419113644,
+            "lng": -122.91648209095003
+        },
+        "keywords": ["inside", "light", "aq"]
+    },
+    {
+        "id": "ff76eebb1e04f3623c132b676701ecbcf03951b9",
+        "filename": "ff76eebb1e04f3623c132b676701ecbcf03951b9.jpeg",
+        "name": "AQ South Hallway",
+        "difficulty": 2,
+        "hint": "A hallway of the AQ.",
+        "coordinates": { "lat": 49.27850065363896, "lng": -122.91745305061342 },
+        "keywords": ["inside", "light", "aq", "hallway"]
+    },
+    {
+        "id": "5f7609f8014fa5a3af123f04a184aeb380754504",
+        "filename": "5f7609f8014fa5a3af123f04a184aeb380754504.jpeg",
+        "name": "AQ Mini Ramp",
+        "difficulty": 2,
+        "hint": "At one of the corners of the AQ.",
+        "coordinates": {
+            "lat": 49.278248677889465,
+            "lng": -122.91613876819612
+        },
+        "keywords": ["inside", "light", "aq", "ramp"]
+    },
+    {
+        "id": "4cf80b992e03ff5ae5d3970a7f5b2ff122aba06f",
+        "filename": "4cf80b992e03ff5ae5d3970a7f5b2ff122aba06f.jpeg",
+        "name": "SFU Physics Infinity Mirror",
+        "difficulty": 4,
+        "hint": "In the SFU physics entrance hallway.",
+        "coordinates": { "lat": 49.2779617039401, "lng": -122.91603684425355 },
+        "keywords": ["inside", "light", "physics", "attraction"]
+    },
+    {
+        "id": "4356f2ba5f5fad10bdb922dbf4570f8c27314be9",
+        "filename": "4356f2ba5f5fad10bdb922dbf4570f8c27314be9.jpeg",
+        "name": "AQ Stairs",
+        "difficulty": 1,
+        "hint": "Goes to the AQ.",
+        "coordinates": { "lat": 49.27915508464133, "lng": -122.91801095008852 },
+        "keywords": ["outside", "light", "aq", "stairs", "building"]
+    },
+    {
+        "id": "f33893d0bc8100af0e4432f3850c9267b4b747e8",
+        "filename": "f33893d0bc8100af0e4432f3850c9267b4b747e8.jpeg",
+        "name": "SFU Equatorial Sundial",
+        "difficulty": 3,
+        "hint": "Neat the observatory.",
+        "coordinates": { "lat": 49.27853215051714, "lng": -122.91464209556581 },
+        "keywords": ["outside", "light", "attraction"]
+    },
+    {
+        "id": "fe0c54a7d73ecea0b87e7c8cae00fdc0391ffe21",
+        "filename": "fe0c54a7d73ecea0b87e7c8cae00fdc0391ffe21.jpeg",
+        "name": "SFU Entrance Sign",
+        "difficulty": 1,
+        "hint": "At a road entrance to SFU.",
+        "coordinates": { "lat": 49.273684894300125, "lng": -122.9256981611252 },
+        "keywords": ["outside", "light"]
+    },
+    {
+        "id": "26c2d1384c07a7c2ebbbda322a1701805e7d0225",
+        "filename": "26c2d1384c07a7c2ebbbda322a1701805e7d0225.jpeg",
+        "name": "SFU Physics Floor Solar system",
+        "difficulty": 4,
+        "hint": "In the SFU physics entrance hallway.",
+        "coordinates": { "lat": 49.277891710040635, "lng": -122.9160636663437 },
+        "keywords": ["inside", "light", "physics", "attraction"]
+    },
+    {
+        "id": "06aa239bc70ec6e62190d578b2cf8be2ec9bad9b",
+        "filename": "06aa239bc70ec6e62190d578b2cf8be2ec9bad9b.jpeg",
+        "name": "SFU Physics Chaotic Pendulum",
+        "difficulty": 4,
+        "hint": "In the SFU physics entrance hallway.",
+        "coordinates": { "lat": 49.27797920239947, "lng": -122.91603147983552 },
+        "keywords": ["inside", "light", "physics", "attraction"]
+    },
+    {
+        "id": "2e60a5a5a9ff47c9c9553a59a3491b275f37314b",
+        "filename": "2e60a5a5a9ff47c9c9553a59a3491b275f37314b.jpeg",
+        "name": "SFU Physics Colour Mixing",
+        "difficulty": 4,
+        "hint": "In the SFU physics entrance hallway.",
+        "coordinates": { "lat": 49.27795470455463, "lng": -122.91604220867158 },
+        "keywords": ["inside", "light", "physics", "attraction"]
+    },
+    {
+        "id": "f32bdfe1e1c7658808af82f891fb4e6061fd0ec6",
+        "filename": "f32bdfe1e1c7658808af82f891fb4e6061fd0ec6.jpeg",
+        "name": "Mini SFU Display",
+        "difficulty": 3,
+        "hint": "In the AQ.",
+        "coordinates": {
+            "lat": 49.279459549580984,
+            "lng": -122.91628360748292
+        },
+        "keywords": ["inside", "light", "display", "attraction", "aq"]
     }
 ]
