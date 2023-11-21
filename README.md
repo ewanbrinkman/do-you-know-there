@@ -128,8 +128,10 @@ To set up an area, do the following:
     `click` of
     [src/app/components/Features/Game/GameMap/GameMap.tsx](src/app/components/Features/Game/GameMap/GameMap.tsx).
     Then, start the game and click somewhere on the map, and see the coordiates
-    of the click logged in the console. Anyways, place a list of objects in this
-    file, with properties as shown in the below example:
+    of the click logged in the console. I made a program to import data faster
+    which lets you select on the map where the location should be. I might clean
+    up the data importer and push the code eventually. Anyways, place a list of
+    objects in this file, with properties as shown in the below example:
 
 ```json
 [
