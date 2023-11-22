@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/react';
 import '@styles/globals.css';
 import Navbar from '@components/Layouts/Navbar';
 import metadataConfig from '@config/metadata.json';
@@ -30,6 +31,7 @@ export default function RootLayout({
             <body className="flex flex-col h-dscreen">
                 <Navbar />
                 {children}
+                <Analytics />
             </body>
         </html>
     );
