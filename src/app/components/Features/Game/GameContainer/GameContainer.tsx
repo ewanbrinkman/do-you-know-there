@@ -161,13 +161,13 @@ const GameContainer: React.FC<GameContainerProps> = (
                 locationData={locationData}
                 guessMarkerCoordinates={guessMarkerCoordinates}
                 setGuessMarkerCoordinates={setGuessMarkerCoordinates}
-            />
-            {unsubmittedGuess &&
+            >
+                {unsubmittedGuess &&
                 mapData &&
                 guessMarkerCoordinates &&
                 locationData && (
                     <Button
-                        className="z-10 absolute bottom-[50px]"
+                        className="absolute bottom-[50px]"
                         onClick={() => {
                             if (mapRef.current === null) {
                                 return;
@@ -190,6 +190,7 @@ const GameContainer: React.FC<GameContainerProps> = (
                         Submit
                     </Button>
                 )}
+            </GameMap>
             {guessed ? (
                 areaLocationData &&
                 mapData && (
