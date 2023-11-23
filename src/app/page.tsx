@@ -8,7 +8,7 @@ import loadMapData from '@utils/loaders/loadMapData';
 import loadMapInfo from '@utils/loaders/loadMapInfo';
 import Container from '@components/Common/Container';
 import Button from '@components/Common/Button';
-import convertProcessedMapDataToMapData from '@utils/converters/convertProcessedMapDataToMapData';
+import getMapData from '@utils/getters/getMapData';
 import ScreenSize from '@typings/data/ScreenSize';
 import useDeveloperMessage from '@hooks/useDeveloperMessage';
 import dynamic from 'next/dynamic';
@@ -28,9 +28,9 @@ const Home: React.FC = () => {
     useEffect(() => {
         loadMapData(area).then((newProcessedMapData: ProcessedMapData) => {
             setProcessedMapData(newProcessedMapData);
-            const newMapData: MapData = convertProcessedMapDataToMapData(
+            const newMapData: MapData = getMapData(
                 newProcessedMapData,
-                window.innerWidth < 800 ? ScreenSize.Small : ScreenSize.Base,
+                window.innerWidth,
             );
             setMapData(newMapData);
         });

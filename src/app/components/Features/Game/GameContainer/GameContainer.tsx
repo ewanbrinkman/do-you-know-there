@@ -7,7 +7,7 @@ import ProcessedMapData from '@typings/data/ProcessedMapData';
 import LocationData from '@typings/data/LocationData';
 import RawLocationData from '@typings/data/RawLocationData';
 import loadMapData from '@utils/loaders/loadMapData';
-import convertProcessedMapDataToMapData from '@utils/converters/convertProcessedMapDataToMapData';
+import getMapData from '@utils/getters/getMapData';
 import ScreenSize from '@typings/data/ScreenSize';
 import gameConfig from '@config/game.json';
 import Button from '@components/Common/Button';
@@ -53,9 +53,9 @@ const GameContainer: React.FC<GameContainerProps> = (
     useEffect(() => {
         loadMapData(area).then((newProcessedMapData: ProcessedMapData) => {
             setProcessedMapData(newProcessedMapData);
-            const newMapData: MapData = convertProcessedMapDataToMapData(
+            const newMapData: MapData = getMapData(
                 newProcessedMapData,
-                window.innerWidth < 800 ? ScreenSize.Small : ScreenSize.Base,
+                window.innerWidth,
             );
             setMapData(newMapData);
         });

@@ -16,11 +16,13 @@
     "zoom": {
         "initial": {
             "baseScreen": 16,
-            "smallScreen": 15
+            "smallScreen": 15,
+            "largeScreen": 17
         },
         "min": {
             "baseScreen": 15,
-            "smallScreen": 15
+            "smallScreen": 15,
+            "largeScreen": 16
         }
     }
 }

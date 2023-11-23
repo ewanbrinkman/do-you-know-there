@@ -20,10 +20,12 @@ interface ProcessedMapData {
         initial: {
             baseScreen: number;
             smallScreen: number;
+            largeScreen: number;
         };
         min: {
             baseScreen: number;
             smallScreen: number;
+            largeScreen: number;
         };
     };
 }
