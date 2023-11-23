@@ -163,33 +163,33 @@ const GameContainer: React.FC<GameContainerProps> = (
                 setGuessMarkerCoordinates={setGuessMarkerCoordinates}
             >
                 {unsubmittedGuess &&
-                mapData &&
-                guessMarkerCoordinates &&
-                locationData && (
-                    <Button
-                        className="absolute bottom-[50px]"
-                        onClick={() => {
-                            if (mapRef.current === null) {
-                                return;
-                            }
+                    mapData &&
+                    guessMarkerCoordinates &&
+                    locationData && (
+                        <Button
+                            className="absolute bottom-[50px]"
+                            onClick={() => {
+                                if (mapRef.current === null) {
+                                    return;
+                                }
 
-                            mapRef.current.setZoom(mapData.zoom.initial);
+                                mapRef.current.setZoom(mapData.zoom.initial);
 
-                            // Find the distance between the two guesses locations.
-                            props.addLocationResult({
-                                distance: new L.LatLng(
-                                    locationData.coordinates.lat,
-                                    locationData.coordinates.lng,
-                                ).distanceTo(guessMarkerCoordinates),
-                                locationData: locationData,
-                            });
-                            setUnsubmittedGuess(false);
-                            setGuessed(true);
-                        }}
-                    >
-                        Submit
-                    </Button>
-                )}
+                                // Find the distance between the two guesses locations.
+                                props.addLocationResult({
+                                    distance: new L.LatLng(
+                                        locationData.coordinates.lat,
+                                        locationData.coordinates.lng,
+                                    ).distanceTo(guessMarkerCoordinates),
+                                    locationData: locationData,
+                                });
+                                setUnsubmittedGuess(false);
+                                setGuessed(true);
+                            }}
+                        >
+                            Submit
+                        </Button>
+                    )}
             </GameMap>
             {guessed ? (
                 areaLocationData &&
