@@ -32,6 +32,9 @@
       <a href="#about-the-project">About The Project</a>
     </li>
     <li>
+      <a href="#quick-links">Quick Links</a>
+    </li>
+    <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
@@ -61,6 +64,11 @@ to a bounded region on the map where the player guesses. "Location" refers to a
 specific point on the map that the player is trying to guess.
 
 **This project is not endorsed or supported by Simon Fraser University.**
+
+## Quick Links
+
+- [How To Add New Locations To An Area](#how-to-add-new-locations-to-an-area)
+- [How To Create A New Area](#how-to-create-a-new-area)
 
 ## Getting Started
 
@@ -97,41 +105,26 @@ For hosting, update `baseUrl` in [src/app/sitemap.ts](src/app/sitemap.ts).
 To see how to set up the game locally on a development server, follow the steps
 under [Getting Started](#getting-started).
 
-### Modifying Areas And Locations
-
 Currently, the project only supports having one area. The area is set in
 [src/app/components/Features/Game/GameContainer/GameContainer.tsx](src/app/components/Features/Game/GameContainer/GameContainer.tsx).
 In the future, the goal is to let the player select from one of multiple
 possible areas to play.
 
-To set up an area, do the following:
+### How To Add New Locations To An Area
 
--   Set the key of an area in
-    [src/app/types/data/MapArea.ts](src/app/types/data/MapArea.ts). The string
-    used in the enum must match the folder names in this project used for the
-    area.
--   Create a folder with the same name as the enum key at
-    [src/assets/data/areas](src/assets/data/areas).
--   Create a file called `info.json` with the following data:
-
-```json
-{
-    "name": "Area Name",
-    "description": "Area description."
-}
-```
-
--   Create a file called `locations.json`. This will store the data for each
-    location (corresponding filename, coordinates, and so on). To get the
-    location coordinates, one possible way for now is to add
-    `console.log([e.latlng.lat, e.latlng.lng]);` in the `MapClickHandler`
-    `click` of
-    [src/app/components/Features/Game/GameMap/GameMap.tsx](src/app/components/Features/Game/GameMap/GameMap.tsx).
-    Then, start the game and click somewhere on the map, and see the coordiates
-    of the click logged in the console. I made a program to import data faster
-    which lets you select on the map where the location should be. I might clean
-    up the data importer and push the code eventually. Anyways, place a list of
-    objects in this file, with properties as shown in the below example:
+1. Open the file called `locations.json` under
+   `src/assets/data/areas/<area>/locations.json`. This stores the data for each
+   location (corresponding filename, coordinates, and so on). To get the
+   location coordinates, one possible way for now is to add
+   `console.log([e.latlng.lat, e.latlng.lng]);` in the `MapClickHandler` `click`
+   of
+   [src/app/components/Features/Game/GameMap/GameMap.tsx](src/app/components/Features/Game/GameMap/GameMap.tsx).
+   Then, start the game and click somewhere on the map, and see the coordiates
+   of the click logged in the console. I made a program to import data faster
+   which lets you select on the map where the location should be. I might clean
+   up the data importer and push the code eventually. Anyways, add your location
+   to the JSON file, with properties as shown in the below example. The
+   `locations.json` file should be like this:
 
 ```json
 [
@@ -162,7 +155,70 @@ To set up an area, do the following:
 ]
 ```
 
--   Create a file called `map.json` with the following data (for zoom levels,
+### How To Create A New Area
+
+1.  Set the key of an area in
+    [src/app/types/data/MapArea.ts](src/app/types/data/MapArea.ts). The string
+    used in the enum must match the folder names in this project used for the
+    area.
+2.  Create a folder with the same name as the enum key at
+    [src/assets/data/areas](src/assets/data/areas).
+3.  Create a file called `info.json` under
+    `src/assets/data/areas/<area>/info.json` with the following data:
+
+```json
+{
+    "name": "Area Name",
+    "description": "Area description."
+}
+```
+
+4.  Create a file called `locations.json` under
+    `src/assets/data/areas/<area>/locations.json`. This will store the data for
+    each location (corresponding filename, coordinates, and so on). To get the
+    location coordinates, one possible way for now is to add
+    `console.log([e.latlng.lat, e.latlng.lng]);` in the `MapClickHandler`
+    `click` of
+    [src/app/components/Features/Game/GameMap/GameMap.tsx](src/app/components/Features/Game/GameMap/GameMap.tsx).
+    Then, start the game and click somewhere on the map, and see the coordiates
+    of the click logged in the console. I made a program to import data faster
+    which lets you select on the map where the location should be. I might clean
+    up the data importer and push the code eventually. Anyways, place a list of
+    JSON objects in this file, with properties as shown in the below example:
+
+```json
+[
+    {
+        "id": 1,
+        "filename": "filename1.jpg",
+        "name": "Location 1",
+        "difficulty": 3,
+        "hint": "Location 1 hint.",
+        "coordinates": {
+            "lat": -90,
+            "lng": -180
+        },
+        "keywords": ["keyword1", "keyword2"]
+    },
+    {
+        "id": 2,
+        "filename": "filename2.jpg",
+        "name": "Location 2",
+        "difficulty": 3,
+        "hint": "Location 2 hint.",
+        "coordinates": {
+            "lat": 90,
+            "lng": 180
+        },
+        "keywords": ["keyword1", "keyword4", "keyword7"]
+    }
+]
+```
+
+5.  Add location images to `public/areas/<area-name>/locations/`. Make sure the
+    filenames here match the filenames in `locations.json`.
+
+6.  Create a file called `map.json` with the following data (for zoom levels,
     experiment to see what works best):
 
 ```json
@@ -184,18 +240,17 @@ To set up an area, do the following:
     "zoom": {
         "initial": {
             "baseScreen": 16,
-            "smallScreen": 15
+            "smallScreen": 15,
+            "largeScreen": 17
         },
         "min": {
             "baseScreen": 15,
-            "smallScreen": 15
+            "smallScreen": 15,
+            "largeScreen": 16
         }
     }
 }
 ```
-
--   Add location images to `public/areas/<area-name>/locations/`. Make sure the
-    filenames here match the filenames in `locations.json`.
 
 ## Contributing
 
