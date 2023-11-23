@@ -1,7 +1,6 @@
 import React from 'react';
 import GameLocationImageProps from '@typings/locationImage/GameLocationImageProps';
 import LocationImage from '@components/Common/LocationImage';
-import './GameLocationImage.css';
 
 const GameLocationImage: React.FC<GameLocationImageProps> = (
     props: GameLocationImageProps,
@@ -14,10 +13,10 @@ const GameLocationImage: React.FC<GameLocationImageProps> = (
         <LocationImage
             locationData={props.locationData}
             onClick={toggleMinimized}
-            className={`absolute z-10 max-w-[70%] max-h-[70%] game-location-image ${
+            className={`absolute z-10 max-w-[70%] max-h-[70%] transition-all duration-300 ease-in-out ${
                 props.minimized
-                    ? 'game-location-image--minimized'
-                    : 'game-location-image--not-minimized'
+                    ? 'bottom-[50px] right-[30px] transform scale-[0.25] xsm:scale-[0.3] sm:scale-[0.4] origin-bottom-right'
+                    : 'bottom-1/2 right-1/2 transform origin-bottom-right scale-100 translate-x-1/2 translate-y-1/2'
             }`}
         />
     );
