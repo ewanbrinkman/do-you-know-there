@@ -7,7 +7,6 @@ import type GameMapProps from '@typings/map/GameMapProps';
 import Map from '@components/Common/Map';
 import LocationImage from '@components/Common/LocationImage';
 import themeConfig from '@config/theme.json';
-import './GameMap.css';
 
 const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
     const correctMarkerRef = useRef<L.Marker | null>(null);
@@ -38,10 +37,10 @@ const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
 
     return (
         <div
-            className={`absolute w-full h-full ${
+            className={`absolute flex justify-center w-full h-full before:z-[1] before:content-[''] before:absolute before:top-0 before:right-0 before:bottom-0 before:left-0 before:transition-all before:duration-300 before:ease-in-out ${
                 props.minimized
-                    ? 'game-map__overlay--minimized'
-                    : 'game-map__overlay--not-minimized'
+                    ? 'before:pointer-events-none'
+                    : 'before:opacity-70 before:bg-black'
             }`}
             onClick={() => {
                 props.setMinimized(true);
@@ -95,6 +94,7 @@ const GameMap: React.FC<GameMapProps> = (props: GameMapProps) => {
                         />
                     )}
             </Map>
+            {props.children}
         </div>
     );
 };

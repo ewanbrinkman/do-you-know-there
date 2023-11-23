@@ -9,6 +9,9 @@ const config: Config = {
     ],
     theme: {
         extend: {
+            screens: {
+                xsm: '400px',
+            },
             colors: {
                 'primary-color': themeConfig.color.primary.base,
                 'primary-color-light': themeConfig.color.primary.light,
