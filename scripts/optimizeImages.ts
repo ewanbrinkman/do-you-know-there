@@ -3,8 +3,8 @@ import sharp from 'sharp';
 
 const areasPath = 'public/areas';
 
-// Want images to not be more than 500KB.
-const targetMaxFileSize = 500000;
+// Want images to not be more than 1MB.
+const targetMaxFileSize = 1000000;
 
 // Function to optimize an image with a given quality.
 async function optimizeImage(
