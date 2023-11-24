@@ -9,7 +9,8 @@
         "start": "next start",
         "lint": "next lint",
         "format:check": "prettier --list-different '.'",
-        "format:fix": "prettier --write '.'"
+        "format:fix": "prettier --write '.'",
+        "optimize-images:locations": "ts-node scripts/optimizeImages.ts"
     },
     "dependencies": {
         "@vercel/analytics": "^1.1.1",
@@ -29,7 +30,9 @@
         "eslint-config-next": "14.0.0",
         "postcss": "^8",
         "prettier": "^3.0.3",
+        "sharp": "^0.32.6",
         "tailwindcss": "^3",
+        "ts-node": "^10.9.1",
         "typescript": "^5"
     }
 }
