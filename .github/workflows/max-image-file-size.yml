@@ -1,0 +1,38 @@
+name: Max Image File Size
+on:
+    pull_request:
+        paths:
+            - 'public/areas/**/locations/*'
+permissions:
+    pull-requests: write
+jobs:
+    max-image-file-size:
+        name: Max Image File Size
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v2
+
+            - name: Check Max Image File Size
+              run: |
+                  for file in $(find public/areas/*/locations -type f -iregex '.*\.\(jpg\|jpeg\|png\|gif\|bmp\|tiff\|webp\)'); do
+                    file_size=$(stat -c %s "$file")
+                    if [ $file_size -gt 500000 ]; then
+                      echo "File $file is larger than 500KB (current size: $file_size bytes)"
+                      exit 1
+                    fi
+                  done
+
+            - name: Comment On failure
+              if: failure()
+              uses: actions/github-script@v7
+              with:
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  script: |
+                      github.rest.issues.createComment({
+                      issue_number: context.issue.number,
+                      owner: context.repo.owner,
+                      repo: context.repo.repo,
+                      body: '❌ Failed Check: `Max Image File Size`. Please run `npm run optimize-images:locations`. Not all location images are <= 500KB.'
+                      })
