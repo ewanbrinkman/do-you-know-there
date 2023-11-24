@@ -5,8 +5,9 @@ on:
             - 'public/areas/**/locations/*'
 jobs:
     max-image-file-size:
+        name: Max Image File Size
         runs-on: ubuntu-latest
-
+        
         steps:
             - name: Checkout Code
               uses: actions/checkout@v2
