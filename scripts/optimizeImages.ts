@@ -41,21 +41,28 @@ areaFolders.forEach((areaFolder) => {
     // Loop through each image file.
     imageFiles.forEach(async (imageFile) => {
         const inputPath = `${locationsFolderPath}/${imageFile}`;
-        const outputPath = `${locationsFolderPath}/optimized_${imageFile}`;
+        const tempOutputPath = `${locationsFolderPath}/temp_${imageFile}`;
 
         // Check the resulting file size.
         let resultingFileSize = getFileSize(inputPath);
 
+        let optimizedImage = false;
         // If the file size is still above the target, apply file size reduction.
         for (
             let imageQuality = 80;
-            resultingFileSize > targetMaxFileSize;
-            imageQuality -= 3
+            resultingFileSize > targetMaxFileSize && imageQuality >= 1;
+            imageQuality -= 1
         ) {
-            await optimizeImage(inputPath, outputPath, imageQuality);
+            optimizedImage = true;
+            await optimizeImage(inputPath, tempOutputPath, imageQuality);
 
             // Check the file size again if needed.
-            resultingFileSize = getFileSize(outputPath);
+            resultingFileSize = getFileSize(tempOutputPath);
+        }
+
+        if (optimizedImage) {
+            fs.unlinkSync(inputPath);
+            fs.renameSync(tempOutputPath, inputPath);
         }
 
         console.log(`Optimized: ${inputPath}`);

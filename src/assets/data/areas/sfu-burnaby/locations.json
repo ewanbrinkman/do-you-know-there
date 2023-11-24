@@ -433,5 +433,14 @@
             "lng": -122.91628360748292
         },
         "keywords": ["inside", "light", "display", "attraction", "aq"]
+    },
+    {
+        "id": "d9dd2f72504d951cd7fa89eb0f139ff5c33d62ee",
+        "filename": "d9dd2f72504d951cd7fa89eb0f139ff5c33d62ee.jpeg",
+        "name": "SUB Back View",
+        "difficulty": 1,
+        "hint": "Near the AQ.",
+        "coordinates": { "lat": 49.27781471663647, "lng": -122.91809141635896 },
+        "keywords": ["outside", "dark", "building", "sub"]
     }
 ]
