@@ -47,7 +47,11 @@ areaFolders.forEach((areaFolder) => {
         let resultingFileSize = getFileSize(inputPath);
 
         // If the file size is still above the target, apply file size reduction.
-        for (let imageQuality = 80; resultingFileSize > targetMaxFileSize; imageQuality -= 3) {
+        for (
+            let imageQuality = 80;
+            resultingFileSize > targetMaxFileSize;
+            imageQuality -= 3
+        ) {
             await optimizeImage(inputPath, outputPath, imageQuality);
 
             // Check the file size again if needed.
