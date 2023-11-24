@@ -67,8 +67,8 @@ specific point on the map that the player is trying to guess.
 
 ## Quick Links
 
-- [How To Add New Locations To An Area](#how-to-add-new-locations-to-an-area)
-- [How To Create A New Area](#how-to-create-a-new-area)
+-   [How To Add New Locations To An Area](#how-to-add-new-locations-to-an-area)
+-   [How To Create A New Area](#how-to-create-a-new-area)
 
 ## Getting Started
 
@@ -154,6 +154,9 @@ possible areas to play.
     }
 ]
 ```
+
+2. Add location images to `public/areas/<area-name>/locations/`. Make sure the
+   filenames here match the filenames in `locations.json`.
 
 ### How To Create A New Area
 
