@@ -442,5 +442,193 @@
         "hint": "Near the AQ.",
         "coordinates": { "lat": 49.27781471663647, "lng": -122.91809141635896 },
         "keywords": ["outside", "dark", "building", "sub"]
+    },
+    {
+        "id": "8dbb44892dd69cb46b82843d0b1403eeb1116f31",
+        "filename": "8dbb44892dd69cb46b82843d0b1403eeb1116f31.jpeg",
+        "name": "SUB and AQ Bridge Connection",
+        "difficulty": 1,
+        "hint": "West of the AQ best east of the SUB.",
+        "coordinates": { "lat": 49.27837116626183, "lng": -122.91787147521974 },
+        "keywords": ["outside", "dark"]
+    },
+    {
+        "id": "fefde5a6b6d3f60b17f256a2ca14f29e63447b38",
+        "filename": "fefde5a6b6d3f60b17f256a2ca14f29e63447b38.jpeg",
+        "name": "Long Stairs",
+        "difficulty": 4,
+        "hint": "Around a science wing.",
+        "coordinates": {
+            "lat": 49.277191765582515,
+            "lng": -122.91630774736406
+        },
+        "keywords": ["inside", "light", "stairs"]
+    },
+    {
+        "id": "0c95d9f696c017d4543961a66cccd782237c97ee",
+        "filename": "0c95d9f696c017d4543961a66cccd782237c97ee.jpeg",
+        "name": "Invisible Building (It Is Camouflaged)",
+        "difficulty": 5,
+        "hint": "Next to the South Science Building.",
+        "coordinates": {
+            "lat": 49.277184766087764,
+            "lng": -122.91896849870685
+        },
+        "keywords": ["outside", "light", "building"]
+    },
+    {
+        "id": "99acbf949614440ba29c058d75bd726705870ae7",
+        "filename": "99acbf949614440ba29c058d75bd726705870ae7.jpeg",
+        "name": "Mini Inside Garden",
+        "difficulty": 3,
+        "hint": "In the AQ.",
+        "coordinates": {
+            "lat": 49.278273175588275,
+            "lng": -122.91597515344621
+        },
+        "keywords": ["inside", "light", "plants", "garden", "building", "aq"]
+    },
+    {
+        "id": "eaed7ec7ea790b459ff8cd7cc4eecd3deb3d015f",
+        "filename": "eaed7ec7ea790b459ff8cd7cc4eecd3deb3d015f.jpeg",
+        "name": "SSC Biology Entrance",
+        "difficulty": 3,
+        "hint": "Attached to the AQ.",
+        "coordinates": { "lat": 49.27835366794154, "lng": -122.91677445173265 },
+        "keywords": ["inside", "light", "biology"]
+    },
+    {
+        "id": "220a7ff9a225c1592fb0a98dce4bdb141721a611",
+        "filename": "220a7ff9a225c1592fb0a98dce4bdb141721a611.jpeg",
+        "name": "SSC Physics Entrance",
+        "difficulty": 3,
+        "hint": "Attached to the AQ.",
+        "coordinates": { "lat": 49.27809119239228, "lng": -122.91598588228227 },
+        "keywords": ["inside", "light", "physics"]
+    },
+    {
+        "id": "17e6c232aa2a365b5c7cad5d075107a7425a134d",
+        "filename": "17e6c232aa2a365b5c7cad5d075107a7425a134d.jpeg",
+        "name": "IT Service Centre",
+        "difficulty": 3,
+        "hint": "At a corner of the AQ.",
+        "coordinates": { "lat": 49.27809119239228, "lng": -122.91598588228227 },
+        "keywords": ["inside", "light", "building", "aq"]
+    },
+    {
+        "id": "8ff4fb97762e6b1dfedd33a36ed218dbadd25781",
+        "filename": "8ff4fb97762e6b1dfedd33a36ed218dbadd25781.jpeg",
+        "name": "East Hallway at AQ South-East",
+        "difficulty": 2,
+        "hint": "At a corner of the AQ.",
+        "coordinates": { "lat": 49.27809119239228, "lng": -122.91598588228227 },
+        "keywords": ["inside", "light", "building", "aq"]
+    },
+    {
+        "id": "812d9ad7e66af1730c42afccbd58d3d82ee8d94e",
+        "filename": "812d9ad7e66af1730c42afccbd58d3d82ee8d94e.jpeg",
+        "name": "Art and Seats",
+        "difficulty": 5,
+        "hint": "In the sciences area.",
+        "coordinates": { "lat": 49.27781121693343, "lng": -122.91653841733934 },
+        "keywords": ["inside", "light", "building", "art", "sciences"]
+    },
+    {
+        "id": "984e88a8fe871ba563799d2a8e0d7509c64ed04e",
+        "filename": "984e88a8fe871ba563799d2a8e0d7509c64ed04e.jpeg",
+        "name": "East AQ Hallway",
+        "difficulty": 2,
+        "hint": "A hallway of the AQ.",
+        "coordinates": { "lat": 49.27846740691241, "lng": -122.91586250066759 },
+        "keywords": ["inside", "light", "building", "aq", "hallway"]
+    },
+    {
+        "id": "014ef6811087abac5f8ab03521c633b1499d2460",
+        "filename": "014ef6811087abac5f8ab03521c633b1499d2460.jpeg",
+        "name": "AQ South-East Stairs Entrance",
+        "difficulty": 3,
+        "hint": "At an entrance to the AQ.",
+        "coordinates": {
+            "lat": 49.278227679852215,
+            "lng": -122.91580349206927
+        },
+        "keywords": ["outside", "light", "stairs", "building", "aq"]
+    },
+    {
+        "id": "d0660a63a1562b0188b6fba09ee536a625c17247",
+        "filename": "d0660a63a1562b0188b6fba09ee536a625c17247.jpeg",
+        "name": "SFU Trottier Observatory",
+        "difficulty": 2,
+        "hint": "East of the AQ.",
+        "coordinates": {
+            "lat": 49.278462157427214,
+            "lng": -122.91520804166795
+        },
+        "keywords": [
+            "outside",
+            "light",
+            "building",
+            "trottier-observatory",
+            "attraction"
+        ]
+    },
+    {
+        "id": "153efefc7d8078af09f8eaf290f2c8caf590a47a",
+        "filename": "153efefc7d8078af09f8eaf290f2c8caf590a47a.jpeg",
+        "name": "SFU Trottier Observatory Calendar",
+        "difficulty": 4,
+        "hint": "At an observatory.",
+        "coordinates": { "lat": 49.27845515811276, "lng": -122.91518658399583 },
+        "keywords": ["outside", "light", "building", "trottier-observatory"]
+    },
+    {
+        "id": "412fafe65dcaf3f88213ecfe2db0c2bc058d25cb",
+        "filename": "412fafe65dcaf3f88213ecfe2db0c2bc058d25cb.jpeg",
+        "name": "SFU Trottier Observatory",
+        "difficulty": 2,
+        "hint": "Good for looking at stars.",
+        "coordinates": {
+            "lat": 49.278556648075146,
+            "lng": -122.91510075330736
+        },
+        "keywords": [
+            "outside",
+            "light",
+            "building",
+            "trottier-observatory",
+            "attraction"
+        ]
+    },
+    {
+        "id": "f49b4b21380b0011c433610d36d06b0358b3d795",
+        "filename": "f49b4b21380b0011c433610d36d06b0358b3d795.jpeg",
+        "name": "AQ View from the SFU Trottier Observatory",
+        "difficulty": 2,
+        "hint": "Near a good place to look at stars. Oh, and there's the AQ by the way.",
+        "coordinates": { "lat": 49.2785496487741, "lng": -122.91502565145494 },
+        "keywords": [
+            "outside",
+            "sunset",
+            "building",
+            "trottier-observatory",
+            "aq"
+        ]
+    },
+    {
+        "id": "5d041e1018f7d04ab35ad0a71ef50a95ae4786b9",
+        "filename": "5d041e1018f7d04ab35ad0a71ef50a95ae4786b9.jpeg",
+        "name": "Oval Reflections",
+        "difficulty": 1,
+        "hint": "Do you really need a hint?",
+        "coordinates": { "lat": 49.27899410241936, "lng": -122.91655987501146 },
+        "keywords": [
+            "outside",
+            "light",
+            "plants",
+            "garden",
+            "oval-reflections",
+            "attraction",
+            "sculpture"
+        ]
     }
 ]
