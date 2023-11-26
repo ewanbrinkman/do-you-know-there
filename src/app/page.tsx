@@ -9,7 +9,6 @@ import loadMapInfo from '@utils/loaders/loadMapInfo';
 import Container from '@components/Common/Container';
 import Button from '@components/Common/Button';
 import getMapData from '@utils/getters/getMapData';
-import ScreenSize from '@typings/data/ScreenSize';
 import useDeveloperMessage from '@hooks/useDeveloperMessage';
 import dynamic from 'next/dynamic';
 const Map = dynamic(() => import('@components/Common/Map'), {

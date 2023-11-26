@@ -155,7 +155,7 @@ possible areas to play.
 ]
 ```
 
-2. Add location images to `public/areas/<area-name>/locations/`. Make sure the
+2. Add location images to `public/areas/<area>/locations/`. Make sure the
    filenames here match the filenames in `locations.json`.
 
 ### How To Create A New Area
@@ -218,7 +218,7 @@ possible areas to play.
 ]
 ```
 
-5.  Add location images to `public/areas/<area-name>/locations/`. Make sure the
+5.  Add location images to `public/areas/<area>/locations/`. Make sure the
     filenames here match the filenames in `locations.json`.
 
 6.  Create a file called `map.json` with the following data (for zoom levels,

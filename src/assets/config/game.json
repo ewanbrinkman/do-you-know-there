@@ -1,3 +1,4 @@
 {
-    "locationsPerGame": 5
+    "locationsPerGame": 5,
+    "gamesBeforeLocationsCanRepeat": 3
 }

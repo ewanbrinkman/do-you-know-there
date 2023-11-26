@@ -1,10 +1,12 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Container from '@components/Common/Container';
 import Button from '@components/Common/Button';
 import ResultsContainerProps from '@typings/game/ResultsContainerProps';
 import LocationImage from '@components/Common/LocationImage';
 import PersonalBests from '@typings/game/PersonalBests';
+import type PastGameLocations from '@typings/data/PastGameLocations';
+import gameConfig from '@config/game.json';
 
 const ResultsContainer: React.FC<ResultsContainerProps> = (
     props: ResultsContainerProps,
@@ -28,6 +30,39 @@ const ResultsContainer: React.FC<ResultsContainerProps> = (
     const [personalBests, setPersonalBests] = useState<PersonalBests | null>(
         null,
     );
+    const savedLocationsRef = useRef(false);
+
+    useEffect(() => {
+        if (props.locationResults.length > 0 && !savedLocationsRef.current) {
+            savedLocationsRef.current = true;
+
+            const rawPastGameLocations =
+                localStorage.getItem('pastGameLocations');
+            const pastGameLocations: PastGameLocations =
+                rawPastGameLocations === null
+                    ? []
+                    : JSON.parse(rawPastGameLocations);
+
+            // If reached the maximum past saved locations, only keep the most
+            // recent ones, minus one so that the new locations can be added.
+            if (
+                pastGameLocations.length >=
+                gameConfig.gamesBeforeLocationsCanRepeat
+            ) {
+                pastGameLocations.splice(0, pastGameLocations.length - 2);
+            }
+            const thisGamelocationIds: string[] = props.locationResults.map(
+                (result) => result.locationData.id,
+            );
+            pastGameLocations.push(thisGamelocationIds);
+
+            // Save the new past locations of games played.
+            localStorage.setItem(
+                'pastGameLocations',
+                JSON.stringify(pastGameLocations),
+            );
+        }
+    }, [props.locationResults]);
 
     useEffect(() => {
         // Read in personal best scores.
