@@ -1,8 +1,7 @@
 name: Max Image File Size
 on:
     pull_request:
-        paths:
-            - 'public/areas/**/locations/*'
+
 permissions:
     pull-requests: write
 jobs:
