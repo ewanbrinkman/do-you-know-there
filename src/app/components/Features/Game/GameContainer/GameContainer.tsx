@@ -8,7 +8,7 @@ import LocationData from '@typings/data/LocationData';
 import RawLocationData from '@typings/data/RawLocationData';
 import loadMapData from '@utils/loaders/loadMapData';
 import getMapData from '@utils/getters/getMapData';
-import ScreenSize from '@typings/data/ScreenSize';
+import type PastGameLocations from '@typings/data/PastGameLocations';
 import gameConfig from '@config/game.json';
 import Button from '@components/Common/Button';
 import GameContainerProps from '@typings/game/GameContainerProps';
@@ -123,7 +123,46 @@ const GameContainer: React.FC<GameContainerProps> = (
         const newLocationIdsNotPicked = areaLocationData.map(
             (locationDataWithId) => locationDataWithId.id,
         );
-        pickLocationId(newLocationIdsNotPicked);
+
+        // Don't pick locations from recently played games if possible. Start by
+        // loading in any location ids from past games.
+        const rawPastGameLocations = localStorage.getItem('pastGameLocations');
+        const pastGameLocations: PastGameLocations =
+            rawPastGameLocations === null
+                ? []
+                : JSON.parse(rawPastGameLocations);
+        if (
+            pastGameLocations.length >= gameConfig.gamesBeforeLocationsCanRepeat
+        ) {
+            pastGameLocations.splice(0, pastGameLocations.length - 3);
+        }
+
+        // Remove as many locations from the saved past games as possible.
+        let validLocationIds: string[] = [...newLocationIdsNotPicked];
+        for (let i = pastGameLocations.length - 1; i >= 0; i--) {
+            // Check if validLocationIds length is larger or equal to
+            // locationsPerGame + pastGameLocations[pastGameLocations.length -
+            // i].
+            if (
+                validLocationIds.length >=
+                gameConfig.locationsPerGame +
+                    pastGameLocations[pastGameLocations.length - 1 - i].length
+            ) {
+                // Remove elements from validLocationIds that are in
+                // pastGameLocations[pastGameLocations.length - i].
+                validLocationIds = validLocationIds.filter(
+                    (id) =>
+                        !pastGameLocations[
+                            pastGameLocations.length - 1 - i
+                        ].includes(id),
+                );
+            } else {
+                // Stop the loop if the condition is no longer met.
+                break;
+            }
+        }
+
+        pickLocationId(validLocationIds);
     }, [areaLocationData]);
 
     return (
@@ -175,7 +214,8 @@ const GameContainer: React.FC<GameContainerProps> = (
 
                                 mapRef.current.setZoom(mapData.zoom.initial);
 
-                                // Find the distance between the two guesses locations.
+                                // Find the distance between the two guesses
+                                // locations.
                                 props.addLocationResult({
                                     distance: new L.LatLng(
                                         locationData.coordinates.lat,
@@ -207,10 +247,10 @@ const GameContainer: React.FC<GameContainerProps> = (
                             removeGuessMapInfo.current?.();
                             setMinimized(false);
 
-                            // Set location data to null for now, to not have the
-                            // old location image be displayed. pickLocationId will
-                            // set the new location data so that the new location
-                            // image is displayed.
+                            // Set location data to null for now, to not have
+                            // the old location image be displayed.
+                            // pickLocationId will set the new location data so
+                            // that the new location image is displayed.
                             setLocationData(null);
 
                             if (
