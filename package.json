@@ -4,9 +4,9 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "build:images && next dev",
-        "build": "build:images && next build",
-        "start": "build:images && next start",
+        "dev": "npm run build:images && next dev",
+        "build": "npm run build:images && next build",
+        "start": "npm run build:images && next start",
         "lint": "next lint",
         "format:check": "prettier --list-different '.'",
         "format:fix": "prettier --write '.'",

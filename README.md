@@ -3,7 +3,8 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![MIT
+License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 </div>
@@ -155,8 +156,11 @@ possible areas to play.
 ]
 ```
 
-2. Add location images to `public/areas/<area>/locations/`. Make sure the
-   filenames here match the filenames in `locations.json`.
+2. Add location images to `src/assets/images/areas/<area>/locations`. Make sure
+   the filenames here match the filenames in `locations.json`.
+3. Run `npm run build:images`. This will optimize the images and output them to
+   `public/images/areas/<area>/locations`. The images in the `public` folder are
+   the ones that are actually served to the client.
 
 ### How To Create A New Area
 
@@ -177,49 +181,13 @@ possible areas to play.
 ```
 
 4.  Create a file called `locations.json` under
-    `src/assets/data/areas/<area>/locations.json`. This will store the data for
-    each location (corresponding filename, coordinates, and so on). To get the
-    location coordinates, one possible way for now is to add
-    `console.log([e.latlng.lat, e.latlng.lng]);` in the `MapClickHandler`
-    `click` of
-    [src/app/components/Features/Game/GameMap/GameMap.tsx](src/app/components/Features/Game/GameMap/GameMap.tsx).
-    Then, start the game and click somewhere on the map, and see the coordiates
-    of the click logged in the console. I made a program to import data faster
-    which lets you select on the map where the location should be. I might clean
-    up the data importer and push the code eventually. Anyways, place a list of
-    JSON objects in this file, with properties as shown in the below example:
+    `src/assets/data/areas/<area>/locations.json`. Set the content of the file
+    to be what appears below. To actually add locations, see
+    [How To Add New Locations To An Area](#how-to-add-new-locations-to-an-area)
 
 ```json
-[
-    {
-        "id": 1,
-        "filename": "filename1.jpg",
-        "name": "Location 1",
-        "difficulty": 3,
-        "hint": "Location 1 hint.",
-        "coordinates": {
-            "lat": -90,
-            "lng": -180
-        },
-        "keywords": ["keyword1", "keyword2"]
-    },
-    {
-        "id": 2,
-        "filename": "filename2.jpg",
-        "name": "Location 2",
-        "difficulty": 3,
-        "hint": "Location 2 hint.",
-        "coordinates": {
-            "lat": 90,
-            "lng": 180
-        },
-        "keywords": ["keyword1", "keyword4", "keyword7"]
-    }
-]
+[]
 ```
-
-5.  Add location images to `public/areas/<area>/locations/`. Make sure the
-    filenames here match the filenames in `locations.json`.
 
 6.  Create a file called `map.json` with the following data (for zoom levels,
     experiment to see what works best):
