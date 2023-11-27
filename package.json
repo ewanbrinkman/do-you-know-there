@@ -4,13 +4,13 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
+        "dev": "npm run build:images && next dev",
+        "build": "npm run build:images && next build",
+        "start": "npm run build:images && next start",
         "lint": "next lint",
         "format:check": "prettier --list-different '.'",
         "format:fix": "prettier --write '.'",
-        "optimize-images:locations": "ts-node scripts/optimizeImages.ts"
+        "build:images": "ts-node scripts/buildImages.ts"
     },
     "dependencies": {
         "@vercel/analytics": "^1.1.1",

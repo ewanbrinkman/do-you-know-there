@@ -6,7 +6,7 @@ const LocationImage: React.FC<LocationImageProps> = (
 ) => {
     return props.locationData ? (
         <img
-            src={`/areas/${props.locationData.area}/locations/${props.locationData.filename}`}
+            src={`images/areas/${props.locationData.area}/locations/${props.locationData.filename}`}
             alt="A location."
             style={props.style}
             className={`rounded-xl ${props.className}`}
