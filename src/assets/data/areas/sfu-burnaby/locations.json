@@ -266,7 +266,7 @@
         "name": "South Side of Green AQ Room",
         "difficulty": 2,
         "hint": "Around the AQ.",
-        "coordinates": { "lat": 49.27898710318038, "lng": -122.91762471199037 },
+        "coordinates": { "lat": 49.279029098599274, "lng": -122.917375266552 },
         "keywords": ["inside", "light", "aq", "green-room"]
     },
     {
@@ -621,6 +621,148 @@
         "difficulty": 1,
         "hint": "Do you really need a hint?",
         "coordinates": { "lat": 49.27899410241936, "lng": -122.91655987501146 },
+        "keywords": [
+            "outside",
+            "light",
+            "plants",
+            "garden",
+            "oval-reflections",
+            "attraction",
+            "sculpture"
+        ]
+    },
+    {
+        "id": "73c099b1d855f6d269bbc2d086870a8013a21dd5",
+        "filename": "73c099b1d855f6d269bbc2d086870a8013a21dd5.jpeg",
+        "name": "Rotunda Shadow",
+        "difficulty": 2,
+        "hint": "Above a main bus area.",
+        "coordinates": {
+            "lat": 49.279620530283694,
+            "lng": -122.92017549276355
+        },
+        "keywords": ["outside", "light", "sun", "building", "rotunda"]
+    },
+    {
+        "id": "f0989b78db339ad57bd5aa9d440f812d132c615e",
+        "filename": "f0989b78db339ad57bd5aa9d440f812d132c615e.jpeg",
+        "name": "Sun Rotunda",
+        "difficulty": 2,
+        "hint": "Above where lots of buses go.",
+        "coordinates": {
+            "lat": 49.279613531133634,
+            "lng": -122.92015403509143
+        },
+        "keywords": ["outside", "light", "sun", "building", "rotunda"]
+    },
+    {
+        "id": "5dea14be156acd566a9ac470ed72beb817f8a879",
+        "filename": "5dea14be156acd566a9ac470ed72beb817f8a879.jpeg",
+        "name": "Convocation Mall Fountain",
+        "difficulty": 1,
+        "hint": "At Convocation Mall.",
+        "coordinates": { "lat": 49.2793790590326, "lng": -122.91941910982133 },
+        "keywords": ["outside", "light", "building", "convocation-mall"]
+    },
+    {
+        "id": "9bcfe94f84ded66ab037b1ecc0143ea6d7f3d819",
+        "filename": "9bcfe94f84ded66ab037b1ecc0143ea6d7f3d819.jpeg",
+        "name": "Transportation Centre White Piano",
+        "difficulty": 1,
+        "hint": "At a major bus area.",
+        "coordinates": { "lat": 49.27956103747651, "lng": -122.9206529259682 },
+        "keywords": [
+            "outside",
+            "light",
+            "building",
+            "transportation-centre",
+            "piano"
+        ]
+    },
+    {
+        "id": "3b5f273ae18c58bc9f93ed806a59d0ea2fd3dcfc",
+        "filename": "3b5f273ae18c58bc9f93ed806a59d0ea2fd3dcfc.jpeg",
+        "name": "View Area near the SUB",
+        "difficulty": 5,
+        "hint": "Near the SUB.",
+        "coordinates": { "lat": 49.27864763889833, "lng": -122.91886121034624 },
+        "keywords": ["outside", "light", "sun", "view", "building"]
+    },
+    {
+        "id": "a6f67b52b126634790a02858ae9506c0337228d2",
+        "filename": "a6f67b52b126634790a02858ae9506c0337228d2.jpeg",
+        "name": "SUB North View",
+        "difficulty": 2,
+        "hint": "West of the AQ but east of Convocation Mall.",
+        "coordinates": { "lat": 49.27884361856274, "lng": -122.91825503110887 },
+        "keywords": ["inside", "light", "building", "sub"]
+    },
+    {
+        "id": "07948f54db5066ef3ed645f19b5759c0472596dd",
+        "filename": "07948f54db5066ef3ed645f19b5759c0472596dd.jpeg",
+        "name": "Rotunda Middle Level",
+        "difficulty": 2,
+        "hint": "Next to WMC.",
+        "coordinates": { "lat": 49.27935806147661, "lng": -122.92033642530443 },
+        "keywords": ["inside", "light", "building", "rotunda"]
+    },
+    {
+        "id": "07b0c9e79cad48d630ecc4fd1be342ec15e65a3b",
+        "filename": "07b0c9e79cad48d630ecc4fd1be342ec15e65a3b.jpeg",
+        "name": "Inside WMC Looking East",
+        "difficulty": 2,
+        "hint": "In WMC.",
+        "coordinates": { "lat": 49.27988124791579, "lng": -122.92263239622119 },
+        "keywords": ["inside", "light", "building", "wmc"]
+    },
+    {
+        "id": "de2124d66e69ce3487475bd438e9a7128df5c1d8",
+        "filename": "de2124d66e69ce3487475bd438e9a7128df5c1d8.jpeg",
+        "name": "WMC Labatt Sport Court",
+        "difficulty": 3,
+        "hint": "Somewhere at WMC.",
+        "coordinates": {
+            "lat": 49.279620530283694,
+            "lng": -122.92183846235277
+        },
+        "keywords": ["outside", "light", "building", "wmc"]
+    },
+    {
+        "id": "1bf29d4394fd49abfc6450e8344a46310837af6c",
+        "filename": "1bf29d4394fd49abfc6450e8344a46310837af6c.jpeg",
+        "name": "Above WMC",
+        "difficulty": 4,
+        "hint": "West of the Transportation Centre.",
+        "coordinates": {
+            "lat": 49.279921492796625,
+            "lng": -122.92221933603288
+        },
+        "keywords": ["outside", "light", "building", "wmc"]
+    },
+    {
+        "id": "346e5bc4af284caf83e48b84cfc4d3fc0b2b1857",
+        "filename": "346e5bc4af284caf83e48b84cfc4d3fc0b2b1857.jpeg",
+        "name": "Oval Reflections Plaque",
+        "difficulty": 5,
+        "hint": "At the most famous SFU sculpture.",
+        "coordinates": { "lat": 49.27900460127594, "lng": -122.91655451059344 },
+        "keywords": [
+            "outside",
+            "light",
+            "plants",
+            "garden",
+            "oval-reflections",
+            "attraction",
+            "sculpture"
+        ]
+    },
+    {
+        "id": "d33124c59c4c74305280ff213effe3078f69cf6d",
+        "filename": "d33124c59c4c74305280ff213effe3078f69cf6d.jpeg",
+        "name": "Side of Oval Reflections",
+        "difficulty": 1,
+        "hint": "Do you really need a hint?",
+        "coordinates": { "lat": 49.27902209936528, "lng": -122.9165652394295 },
         "keywords": [
             "outside",
             "light",

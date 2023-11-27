@@ -83,7 +83,7 @@ function getFileSize(filePath: string): number {
 // Function to compute the hash of a file.
 function computeFileHash(filePath: string): string {
     const fileContent = fs.readFileSync(filePath);
-    const hash = crypto.createHash('md5').update(fileContent).digest('hex');
+    const hash = crypto.createHash('sha512').update(fileContent).digest('hex');
     return hash;
 }
 
@@ -133,10 +133,7 @@ const areaFolders = fs
 areaFolders.forEach((areaFolder) => {
     const areaFolderPath = path.join(assetsPath, areaFolder);
     const locationsFolderPath = path.join(areaFolderPath, 'locations');
-    const metadataFilePath = path.join(
-        areaFolderPath,
-        'metadata.json',
-    );
+    const metadataFilePath = path.join(areaFolderPath, 'metadata.json');
 
     const supportedFileTypes = /\.(jpe?g|png|gif|bmp|tiff|webp)$/i;
 
