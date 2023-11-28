@@ -3,7 +3,7 @@ import React from 'react';
 import useDeveloperMessage from '@hooks/useDeveloperMessage';
 import Container from '@components/Common/Container';
 
-const Home: React.FC = () => {
+const LoadingPage: React.FC = () => {
     useDeveloperMessage();
 
     return (
@@ -15,4 +15,4 @@ const Home: React.FC = () => {
     );
 };
 
-export default Home;
+export default LoadingPage;

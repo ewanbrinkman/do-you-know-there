@@ -46,7 +46,6 @@ const AboutPage: React.FC = () => {
                     (MIT License) {':)'}
                 </p>
             </Container>
-            <Button href="/secret">Secret Button</Button>
         </div>
     );
 };
