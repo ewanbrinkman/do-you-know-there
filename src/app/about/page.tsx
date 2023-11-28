@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Container from '@components/Common/Container';
+import Button from '@components/Common/Button';
 import useDeveloperMessage from '@hooks/useDeveloperMessage';
 
 const AboutPage: React.FC = () => {
@@ -45,6 +46,7 @@ const AboutPage: React.FC = () => {
                     (MIT License) {':)'}
                 </p>
             </Container>
+            <Button href="/secret">Secret Button</Button>
         </div>
     );
 };

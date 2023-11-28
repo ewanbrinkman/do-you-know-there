@@ -16,7 +16,7 @@ jobs:
               run: |
                   for file in $(find public/areas/*/locations -type f -iregex '.*\.\(jpg\|jpeg\|png\|gif\|bmp\|tiff\|webp\)'); do
                     file_size=$(stat -c %s "$file")
-                    if [ $file_size -gt 500000 ]; then
+                    if [ $file_size -gt 400000 ]; then
                       echo "File $file is larger than 500 KB (current size: $file_size bytes)"
                       exit 1
                     fi
