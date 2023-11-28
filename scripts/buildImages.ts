@@ -17,7 +17,7 @@ const assetsPath = path.join('src', 'assets', basePath);
 const publicPath = path.join('public', basePath);
 
 // Want images to not be more than this many bytes.
-const targetMaxFileSize = 500000;
+const targetMaxFileSize = 400000;
 
 // Function to copy an image from source to destination.
 function copyImage(srcPath: string, destPath: string): void {
