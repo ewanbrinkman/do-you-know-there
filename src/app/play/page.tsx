@@ -12,7 +12,7 @@ const GameContainer = dynamic(
     },
 );
 
-function Game() {
+const GamePage: React.FC = () => {
     const [gameOver, setGameOver] = useState(false);
     const [locationResults, setLocationResults] = useState<LocationResult[]>(
         [],
@@ -45,4 +45,4 @@ function Game() {
     );
 }
 
-export default Game;
+export default GamePage;
