@@ -250,25 +250,25 @@ Project Link:
 The following images were provided by other people. The name of the image
 provider is given if the person wanted to have their name public.
 
--   For the [sfu-burnaby](/public/areas/sfu-burnaby/locations/) area:
-    -   [3bc6566f6bf7b39a3bd2e4221dd79012ba8960d9.jpeg](/public/areas/sfu-burnaby/locations/3bc6566f6bf7b39a3bd2e4221dd79012ba8960d9.jpeg)
-    -   [010394b2d4a955b7583636f5111e852e31854d8b.jpeg](/public/areas/sfu-burnaby/locations/010394b2d4a955b7583636f5111e852e31854d8b.jpeg)
-    -   [57bc9c5058a29f4200e8d3393b9abcb880bbc7c3.jpeg](/public/areas/sfu-burnaby/locations/57bc9c5058a29f4200e8d3393b9abcb880bbc7c3.jpeg)
-    -   [0c8f7c924cd121c28b76d6e7b089180a0c5066e8.jpeg](/public/areas/sfu-burnaby/locations/0c8f7c924cd121c28b76d6e7b089180a0c5066e8.jpeg)
-    -   [45763c51aae04cd52d91c7019990422e9bc6214c.jpeg](/public/areas/sfu-burnaby/locations/45763c51aae04cd52d91c7019990422e9bc6214c.jpeg)
-    -   [945e1d76dd89d9f7095e55ceb85efc6741f389f1.jpeg](/public/areas/sfu-burnaby/locations/945e1d76dd89d9f7095e55ceb85efc6741f389f1.jpeg)
-    -   [21c41324f2d576ed82ac10d154acdd29302eb16f.jpeg](/public/areas/sfu-burnaby/locations/21c41324f2d576ed82ac10d154acdd29302eb16f.jpeg)
-    -   [9adc27aee211f9329cb55372befad87f34d3a6d0.jpeg](/public/areas/sfu-burnaby/locations/9adc27aee211f9329cb55372befad87f34d3a6d0.jpeg)
-    -   [af3f6d7f9e057ee5776d621d377ecd80f4a7fc2e.jpeg](/public/areas/sfu-burnaby/locations/af3f6d7f9e057ee5776d621d377ecd80f4a7fc2e.jpeg)
-    -   [00eb78fcfb4d2ea6c0d4ab49f945a88333fe1574.jpeg](/public/areas/sfu-burnaby/locations/00eb78fcfb4d2ea6c0d4ab49f945a88333fe1574.jpeg)
-    -   [03988cbf87430a3da28f4d743febaf718450a868.jpeg](/public/areas/sfu-burnaby/locations/03988cbf87430a3da28f4d743febaf718450a868.jpeg)
-    -   [58f17ce4480d86a9c4f8402e23c56e74507e75ad.jpeg](/public/areas/sfu-burnaby/locations/58f17ce4480d86a9c4f8402e23c56e74507e75ad.jpeg)
-    -   [680a6f7688ff6e5dc22143f9507c558d2c5f969f.jpeg](/public/areas/sfu-burnaby/locations/680a6f7688ff6e5dc22143f9507c558d2c5f969f.jpeg)
-    -   [edfb76cc4a6e18652df2ec3c136f84c4dde04af3.jpeg](/public/areas/sfu-burnaby/locations/edfb76cc4a6e18652df2ec3c136f84c4dde04af3.jpeg)
-    -   [2e4d1691540be3fcd6d0cddc3ccf9a74cbd4978b.jpeg](/public/areas/sfu-burnaby/locations/2e4d1691540be3fcd6d0cddc3ccf9a74cbd4978b.jpeg)
-    -   [385f7ff380ded6a643f8815bb39a222d30b4f39d.jpeg](/public/areas/sfu-burnaby/locations/385f7ff380ded6a643f8815bb39a222d30b4f39d.jpeg)
-    -   [4ece99ea4ade30626f62f4f7b1ac583b84f6ec8c.jpeg](/public/areas/sfu-burnaby/locations/4ece99ea4ade30626f62f4f7b1ac583b84f6ec8c.jpeg)
-    -   [ad0f1b4c85ba808ca8e40154ae74887a7f421a6e.jpeg](/public/areas/sfu-burnaby/locations/ad0f1b4c85ba808ca8e40154ae74887a7f421a6e.jpeg)
+-   For the [sfu-burnaby](/public/images/areas/sfu-burnaby/locations/) area:
+    -   [3bc6566f6bf7b39a3bd2e4221dd79012ba8960d9.jpeg](/public/images/areas/sfu-burnaby/locations/3bc6566f6bf7b39a3bd2e4221dd79012ba8960d9.jpeg)
+    -   [010394b2d4a955b7583636f5111e852e31854d8b.jpeg](/public/images/areas/sfu-burnaby/locations/010394b2d4a955b7583636f5111e852e31854d8b.jpeg)
+    -   [57bc9c5058a29f4200e8d3393b9abcb880bbc7c3.jpeg](/public/images/areas/sfu-burnaby/locations/57bc9c5058a29f4200e8d3393b9abcb880bbc7c3.jpeg)
+    -   [0c8f7c924cd121c28b76d6e7b089180a0c5066e8.jpeg](/public/images/areas/sfu-burnaby/locations/0c8f7c924cd121c28b76d6e7b089180a0c5066e8.jpeg)
+    -   [45763c51aae04cd52d91c7019990422e9bc6214c.jpeg](/public/images/areas/sfu-burnaby/locations/45763c51aae04cd52d91c7019990422e9bc6214c.jpeg)
+    -   [945e1d76dd89d9f7095e55ceb85efc6741f389f1.jpeg](/public/images/areas/sfu-burnaby/locations/945e1d76dd89d9f7095e55ceb85efc6741f389f1.jpeg)
+    -   [21c41324f2d576ed82ac10d154acdd29302eb16f.jpeg](/public/images/areas/sfu-burnaby/locations/21c41324f2d576ed82ac10d154acdd29302eb16f.jpeg)
+    -   [9adc27aee211f9329cb55372befad87f34d3a6d0.jpeg](/public/images/areas/sfu-burnaby/locations/9adc27aee211f9329cb55372befad87f34d3a6d0.jpeg)
+    -   [af3f6d7f9e057ee5776d621d377ecd80f4a7fc2e.jpeg](/public/images/areas/sfu-burnaby/locations/af3f6d7f9e057ee5776d621d377ecd80f4a7fc2e.jpeg)
+    -   [00eb78fcfb4d2ea6c0d4ab49f945a88333fe1574.jpeg](/public/images/areas/sfu-burnaby/locations/00eb78fcfb4d2ea6c0d4ab49f945a88333fe1574.jpeg)
+    -   [03988cbf87430a3da28f4d743febaf718450a868.jpeg](/public/images/areas/sfu-burnaby/locations/03988cbf87430a3da28f4d743febaf718450a868.jpeg)
+    -   [58f17ce4480d86a9c4f8402e23c56e74507e75ad.jpeg](/public/images/areas/sfu-burnaby/locations/58f17ce4480d86a9c4f8402e23c56e74507e75ad.jpeg)
+    -   [680a6f7688ff6e5dc22143f9507c558d2c5f969f.jpeg](/public/images/areas/sfu-burnaby/locations/680a6f7688ff6e5dc22143f9507c558d2c5f969f.jpeg)
+    -   [edfb76cc4a6e18652df2ec3c136f84c4dde04af3.jpeg](/public/images/areas/sfu-burnaby/locations/edfb76cc4a6e18652df2ec3c136f84c4dde04af3.jpeg)
+    -   [2e4d1691540be3fcd6d0cddc3ccf9a74cbd4978b.jpeg](/public/images/areas/sfu-burnaby/locations/2e4d1691540be3fcd6d0cddc3ccf9a74cbd4978b.jpeg)
+    -   [385f7ff380ded6a643f8815bb39a222d30b4f39d.jpeg](/public/images/areas/sfu-burnaby/locations/385f7ff380ded6a643f8815bb39a222d30b4f39d.jpeg)
+    -   [4ece99ea4ade30626f62f4f7b1ac583b84f6ec8c.jpeg](/public/images/areas/sfu-burnaby/locations/4ece99ea4ade30626f62f4f7b1ac583b84f6ec8c.jpeg)
+    -   [ad0f1b4c85ba808ca8e40154ae74887a7f421a6e.jpeg](/public/images/areas/sfu-burnaby/locations/ad0f1b4c85ba808ca8e40154ae74887a7f421a6e.jpeg)
 
 <!-- Markdown links and images. -->
 

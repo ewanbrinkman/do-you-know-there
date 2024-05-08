@@ -194,7 +194,7 @@
     {
         "id": "58f17ce4480d86a9c4f8402e23c56e74507e75ad",
         "filename": "58f17ce4480d86a9c4f8402e23c56e74507e75ad.jpeg",
-        "name": "Orange Sculpture",
+        "name": "North Face",
         "difficulty": 2,
         "hint": "Around WMC.",
         "coordinates": {
@@ -398,7 +398,7 @@
     {
         "id": "26c2d1384c07a7c2ebbbda322a1701805e7d0225",
         "filename": "26c2d1384c07a7c2ebbbda322a1701805e7d0225.jpeg",
-        "name": "SFU Physics Floor Solar system",
+        "name": "SFU Physics Floor Solar System",
         "difficulty": 4,
         "hint": "In the SFU physics entrance hallway.",
         "coordinates": { "lat": 49.277891710040635, "lng": -122.9160636663437 },
