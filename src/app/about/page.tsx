@@ -32,6 +32,14 @@ const AboutPage: React.FC = () => {
                     </Link>
                     .
                 </p>
+                <p>
+                    Image credits can be found <Link
+                        href="/credits"
+                        className="text-white hover:underline"
+                    >
+                        here
+                    </Link>.
+                </p>
             </Container>
             <Container className="w-full sm:max-w-4xl mx-16">
                 <h1 className="text-3xl font-bold">Developers</h1>
