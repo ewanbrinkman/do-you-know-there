@@ -34,7 +34,7 @@ const AboutPage: React.FC = () => {
                 </p>
                 <p>
                     Image credits can be found <Link
-                        href="/credits"
+                        href="https://github.com/ewanbrinkman/do-you-know-there?tab=readme-ov-file#location-images"
                         className="text-white hover:underline"
                     >
                         here
