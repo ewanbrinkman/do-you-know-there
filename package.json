@@ -10,7 +10,7 @@
         "lint": "next lint",
         "format:check": "prettier --list-different '.'",
         "format:fix": "prettier --write '.'",
-        "build:images": "ts-node/esm scripts/buildImages.ts"
+        "build:images": "node --loader ts-node/esm scripts/buildImages.ts"
     },
     "dependencies": {
         "@vercel/analytics": "^1.1.1",
